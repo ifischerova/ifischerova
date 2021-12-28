@@ -611,10 +611,6 @@ html {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-min {
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -661,9 +657,14 @@ html {
   overflow-x: hidden;
 }
 
-.bg-slate-300 {
+.bg-very-dark-violet {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(16 0 43 / var(--tw-bg-opacity));
+}
+
+.bg-dark-violet {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 0 70 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -686,11 +687,6 @@ html {
 
 .p-4 {
   padding: 1rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .py-4 {
@@ -940,10 +936,6 @@ html {
 #toggle:checked + .nav {
   top: 0;
   transform: scale(1);
-}
-
-hr {
-  background: linear-gradient(to right, #5f0a87, #a4508b);
 }
 
 header a:hover,

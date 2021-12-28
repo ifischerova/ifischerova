@@ -19,6 +19,8 @@ module.exports = {
         "black-end": "#000000",
         "violet-start": "#A4508B",
         "violet-end": "#5F0A87",
+        "very-dark-violet": "#10002B",
+        "dark-violet": "#240046",
       },
     },
   },

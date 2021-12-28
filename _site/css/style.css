@@ -91,10 +91,6 @@ html {
   transform: scale(1);
 }
 
-hr {
-  background: linear-gradient(to right, #5f0a87, #a4508b);
-}
-
 header a:hover,
 header a:focus,
 footer a:hover,
