@@ -1,3 +1,3 @@
 ## ifischerova.cz 
-Personal website of enthusiastic IT girl &runner &  mummy. 
-Currently working in QA and hard working and dreaming to become a frontend developer.
+Personal website of enthusiastic IT mummy & runner. 
+Currently working in QA. Hard working to become a frontend developer.
