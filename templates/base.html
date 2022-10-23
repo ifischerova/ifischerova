@@ -23,24 +23,24 @@
 <body>
     {% block content %}{% endblock %}
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand mb-0 h1" href="#">
-                    <h1 class="text-3xl underline">Iva Fischerová</h1>
+        <nav class="">
+            <div class="">
+                <a class="" href="#">
+                    <h1 class="">Iva Fischerová</h1>
                 </a>
             </div>
 
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{{ url_for('get_about_page') }}">About <span
+            <div class="">
+                <a class="" href="{{ url_for('get_about_page') }}">About <span
                         class="sr-only">vybráno</span></a>
-                <a class="nav-item nav-link" href="{{ url_for('get_blog_page') }}">Blog </a>
-                <a class="nav-item nav-link" href="{{ url_for('get_projects_page') }}">Projects</a>
+                <a class="" href="{{ url_for('get_blog_page') }}">Blog </a>
+                <a class="" href="{{ url_for('get_projects_page') }}">Projects</a>
             </div>
         </nav>
     </header>
     <footer>
         {% block footer %}
-        <div class="social-media">
+        <div class="">
             <a href="https://github.com/ifischerova">
                 <i class="fa-brands fa-square-github"></i>
             </a>
