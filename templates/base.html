@@ -20,41 +20,39 @@
     {% endblock %}
 </head>
 
-<body>
-    {% block content %}{% endblock %}
-    <header>
-        <nav class="">
-            <div class="">
+<body class="is-responsive m-auto p-0 min-h-screen font-normal text-base bg-gradient-to-r from-silver-begin to-silver-end">
+    <main class="is-responsive p-10 min-h-screen">
+        <header>
+            <nav class="is-responsive">
                 <a class="" href="{{ url_for('get_main_page') }}">
                     <h1 class="">Iva Fischerová</h1>
                 </a>
-            </div>
-
+                <div class="">
+                    <a class="" href="{{ url_for('get_about_page') }}">About <span class="sr-only">vybráno</span></a>
+                    <a class="" href="{{ url_for('get_blog_page') }}">Blog </a>
+                    <a class="" href="{{ url_for('get_projects_page') }}">Projects</a>
+                </div>
+            </nav>
+        </header>
+        {% block content %}{% endblock %}
+        <footer class="is-responsive">
+            {% block footer %}
             <div class="">
-                <a class="" href="{{ url_for('get_about_page') }}">About <span
-                        class="sr-only">vybráno</span></a>
-                <a class="" href="{{ url_for('get_blog_page') }}">Blog </a>
-                <a class="" href="{{ url_for('get_projects_page') }}">Projects</a>
+                <a href="https://github.com/ifischerova">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/iva-fischerova/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/ifischerova_cz">
+                    <i class="fa-brands fa-square-twitter"></i></a>
             </div>
-        </nav>
-    </header>
-    <footer>
-        {% block footer %}
-        <div class="">
-            <a href="https://github.com/ifischerova">
-                <i class="fa-brands fa-square-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/iva-fischerova/">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com/ifischerova_cz">
-                <i class="fa-brands fa-square-twitter"></i></a>
-        </div>
-        <div>
-            Iva Fischerová &copy; 2022 | <a href="mailto:info@ifischerova.cz"> info@ifischerova.cz</a>
-        </div>
-        {% endblock %}
-    </footer>
+            <div>
+                Iva Fischerová &copy; 2022 | <a href="mailto:info@ifischerova.cz"> info@ifischerova.cz</a>
+            </div>
+            {% endblock %}
+        </footer>
+    </main>
 </body>
 
 </html>
