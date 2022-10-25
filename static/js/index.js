@@ -1,3 +1,3 @@
 function toggleIcon() {
-    document.getElementById('hamburger').classList.add("is-active");
+    document.getElementById('hamburger').classList.toggle("is-active");
 };
