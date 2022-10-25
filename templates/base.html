@@ -24,18 +24,19 @@
 <body class="is-responsive m-auto p-0 min-h-screen font-normal text-base  bg-slate-300">
     <main class="is-responsive w-full min-h-screen">
         <header
-            class="is-responsive m-0 px-3 w-full h-1/6 bg-gradient-to-r from-black-begin to-black-end text-slate-300 md:inline-block">
-            <div class="hamburger pointer-events-auto" onclick="toggleIcon()" id="hamburger">
+            class="flex grow flex-row items-center m-0 px-3 w-full h-1/6 bg-gradient-to-r from-black-begin to-black-end text-slate-300">
+            <a class="font-bold w-4/5 my-10 text-4xl" href="{{ url_for('get_main_page') }}"><span>ifischerova.cz</span></a>
+            <div class="hidden">
+                <a class="links py-4 text-2xl" href="{{ url_for('get_about_page') }}"><span>About</span> <span
+                        class="sr-only">vybráno</span></a>
+                <a class="links py-4 text-2xl" href="{{ url_for('get_blog_page') }}"><span> Blog </span> </a>
+                <a class="links py-4 text-2xl" href="{{ url_for('get_projects_page') }}"><span>Projects</span> </a>
+            </div>
+            <div class="hamburger w-1/5" onclick="toggleIcon()" id="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <a class="links my-10 text-4xl" href="{{ url_for('get_main_page') }}"><span>ifischerova.cz</span></a>
-
-            <a class="links py-4 text-2xl" href="{{ url_for('get_about_page') }}"><span>About</span> <span
-                    class="sr-only">vybráno</span></a>
-            <a class="links py-4 text-2xl" href="{{ url_for('get_blog_page') }}"><span> Blog </span> </a>
-            <a class="links py-4 text-2xl" href="{{ url_for('get_projects_page') }}"><span>Projects</span> </a>
         </header>
         <hr class="p-1 w-full">
         {% block content %}{% endblock %}
