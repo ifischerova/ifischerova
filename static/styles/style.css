@@ -5,8 +5,106 @@
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
 
+.line{
+    width: 50px;
+    height: 5px;
+    background-color: #cbd5e1;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+#hamburger.is-active{
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  #hamburger.is-active .line:nth-child(2){
+    width: 0px;
+  }
+  
+  #hamburger.is-active .line:nth-child(1),
+  #hamburger.is-active .line:nth-child(3){
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  
+  #hamburger.is-active .line:nth-child(1){
+    -webkit-transform: translateY(13px);
+    -ms-transform: translateY(13px);
+    -o-transform: translateY(13px);
+    transform: translateY(13px);
+  }
+  
+  #hamburger.is-active .line:nth-child(3){
+    -webkit-transform: translateY(-13px) rotate(90deg);
+    -ms-transform: translateY(-13px) rotate(90deg);
+    -o-transform: translateY(-13px) rotate(90deg);
+    transform: translateY(-13px) rotate(90deg);
+  }
+
+hr {
+    background: linear-gradient(to right, #5f0a87, #a4508b);
+}
+
+span {
+    display: inline-block;
+    position: relative;
+    padding: 0 4px 8px 4px
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color:  #cbd5e1;
+}
+
+span:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #5f0a87, #a4508b);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+  span:hover:after,
+  span:focus:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+footer div i:hover,
+footer div a:focus {
+    background-image: linear-gradient(to right, #5f0a87, #a4508b);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
 @layer utilities {
     .is-responsive {
       @apply  flex grow flex-col justify-center items-center;
+    }
+
+    .links {
+      @apply font-bold w-full text-center;
     }
 }
