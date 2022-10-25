@@ -25,14 +25,14 @@
     <main class="is-responsive w-full">
         <header
             class="flex grow flex-row items-center m-0 px-3 w-full !h-[150px] bg-gradient-to-r from-black-begin to-black-end text-slate-300">
-            <a class="font-bold w-4/5 my-4 text-4xl md:w-1/5" href="{{ url_for('get_main_page') }}"><span>ifischerova.cz</span></a>
-            <div class="hidden md:inline-block md:w-3/5">
-                <a class="links py-4 text-2xl" href="{{ url_for('get_about_page') }}"><span>About</span> <span
+            <a class="font-bold w-4/5 my-4 text-2xl sm:text-4xl md:w-2/5" href="{{ url_for('get_main_page') }}"><span>ifischerova.cz</span></a>
+            <div class="hidden md:inline-block md:w-3/5 md:text-right">
+                <a class="menu-links p-4 text-2xl" href="{{ url_for('get_about_page') }}"><span>About</span> <span
                         class="sr-only">vybráno</span></a>
-                <a class="links py-4 text-2xl" href="{{ url_for('get_blog_page') }}"><span> Blog </span> </a>
-                <a class="links py-4 text-2xl" href="{{ url_for('get_projects_page') }}"><span>Projects</span> </a>
+                <a class="menu-links p-4 text-2xl" href="{{ url_for('get_blog_page') }}"><span> Blog </span> </a>
+                <a class="menu-links p-4 text-2xl" href="{{ url_for('get_projects_page') }}"><span>Projects</span> </a>
             </div>
-            <div class="hamburger w-1/5" onclick="toggleIcon()" id="hamburger">
+            <div class="hamburger w-1/5 md:hidden" onclick="toggleIcon()" id="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>

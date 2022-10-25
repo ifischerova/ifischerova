@@ -104,7 +104,7 @@ footer div a:focus {
       @apply  flex grow flex-col justify-center items-center;
     }
 
-    .links {
-      @apply font-bold w-full text-center;
+    .menu-links {
+      @apply font-bold w-full;
     }
 }
