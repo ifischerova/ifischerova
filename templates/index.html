@@ -3,10 +3,32 @@
 {% endblock %}
 
 {% block content %}
-<p class="w-full text-center font-bold h-[760px]">
-  "To jsem ještě nikdy nedělala. To mi určitě půjde."
-  <br>
-  Pipi Dlouhá Punčocha
-</p>
+<section class="is-responsive p-5 w-4/5">
+  <h1 class="m-6 font-bold text-center text-3xl">Actual blog posts</h1>
+  <div class="relative py-3 mt-3">
+    <a class="article-link" href="{{ url_for('get_blog_page') }}">
+    <h2 class="my-2 font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2></a>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse saepe explicabo veritatis vel dolore illo natus
+      nemo quis omnis ipsam, alias labore eveniet maiores distinctio iste optio, dicta cumque minima.
+      <a class="article-link font-bold" href="{{ url_for('get_blog_page') }}"><span>Celý článek</span></a>
+    </p>
+  </div>
+  <div class="relative py-3 mt-3">
+    <a class="article-link" href="{{ url_for('get_blog_page') }}">
+    <h2 class="my-2 font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2></a>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse saepe explicabo veritatis vel dolore illo natus
+      nemo quis omnis ipsam, alias labore eveniet maiores distinctio iste optio, dicta cumque minima.
+      <a class="article-link font-bold" href="{{ url_for('get_blog_page') }}"><span>Celý článek</span></a>
+    </p>
+  </div>
+  <div class="relative py-3 mt-3">
+  <a class="article-link" href="{{ url_for('get_blog_page') }}">
+  <h2 class="my-2 font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2></a>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse saepe explicabo veritatis vel dolore illo natus
+    nemo quis omnis ipsam, alias labore eveniet maiores distinctio iste optio, dicta cumque minima.
+    <a class="article-link font-bold" href="{{ url_for('get_blog_page') }}"><span>Celý článek</span></a>
+  </p>
+</div>
+</section>
 
 {% endblock %}

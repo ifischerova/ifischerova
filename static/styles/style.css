@@ -64,8 +64,10 @@ span {
     padding: 0 4px 8px 4px
 }
 
-a:hover,
-a:focus {
+header a:hover,
+header a:focus,
+footer a:hover,
+footer a:focus {
     text-decoration: none;
     color:  #cbd5e1;
 }
@@ -97,6 +99,12 @@ footer div a:focus {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+}
+
+.article-link:hover,
+.article-link:focus {
+  text-decoration:none;
+  color: black;
 }
 
 @layer utilities {

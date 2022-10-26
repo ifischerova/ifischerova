@@ -25,8 +25,19 @@
     <main class="is-responsive w-full">
         <header
             class="flex grow flex-row items-center m-0 px-3 w-full !h-[150px] bg-gradient-to-r from-black-begin to-black-end text-slate-300">
-            <a class="font-bold w-4/5 my-4 text-2xl sm:text-4xl md:w-2/5" href="{{ url_for('get_main_page') }}"><span>ifischerova.cz</span></a>
-            <div class="hidden md:inline-block md:w-3/5 md:text-right">
+            <div class=" w-4/5">
+                <a class="font-bold my-4 text-2xl sm:text-4xl md:w-2/5"
+                    href="{{ url_for('get_main_page') }}"><span>ifischerova.cz</span></a>
+                <p class="w-full text-left font-bold italic">
+                    "To jsem ještě nikdy nedělala. 
+                    <br>
+                    To mi určitě půjde."
+                </p>
+                <p>
+                    Pipi Dlouhá Punčocha
+                </p>
+            </div>
+            <div class="hidden md:inline-block md:w-3/5 md:text-right" id="sidebar-menu">
                 <a class="menu-links p-4 text-2xl" href="{{ url_for('get_about_page') }}"><span>About</span> <span
                         class="sr-only">vybráno</span></a>
                 <a class="menu-links p-4 text-2xl" href="{{ url_for('get_blog_page') }}"><span> Blog </span> </a>
@@ -41,7 +52,8 @@
         <hr class="p-1 w-full">
         {% block content %}{% endblock %}
         <hr class="p-1 w-full">
-        <footer class="m-0 p-4 w-full text-center h-[150px] bg-gradient-to-r from-black-begin to-black-end text-slate-300">
+        <footer
+            class="m-0 p-4 w-full text-center h-[150px] bg-gradient-to-r from-black-begin to-black-end text-slate-300">
             {% block footer %}
             <div class="inline-block w-full">
                 <i class="fa-brands fa-square-github text-6xl mx-3"><a href="https://github.com/ifischerova"></a></i>

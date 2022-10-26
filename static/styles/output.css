@@ -573,12 +573,20 @@ video {
   position: static;
 }
 
+.relative {
+  position: relative;
+}
+
 .m-auto {
   margin: auto;
 }
 
 .m-0 {
   margin: 0px;
+}
+
+.m-6 {
+  margin: 1.5rem;
 }
 
 .my-4 {
@@ -589,6 +597,15 @@ video {
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .block {
@@ -613,26 +630,6 @@ video {
 
 .h-\[150px\] {
   height: 150px;
-}
-
-.h-\[760px\] {
-  height: 760px;
-}
-
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-2\/5 {
-  height: 40%;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[500px\] {
-  height: 500px;
 }
 
 .min-h-screen {
@@ -694,13 +691,26 @@ video {
   padding: 0.25rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -722,12 +732,26 @@ video {
   line-height: 1;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-normal {
   font-weight: 400;
 }
 
 .font-bold {
   font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .text-slate-300 {
@@ -798,8 +822,10 @@ span {
   padding: 0 4px 8px 4px
 }
 
-a:hover,
-a:focus {
+header a:hover,
+header a:focus,
+footer a:hover,
+footer a:focus {
   text-decoration: none;
   color:  #cbd5e1;
 }
@@ -831,6 +857,12 @@ footer div a:focus {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+.article-link:hover,
+.article-link:focus {
+  text-decoration:none;
+  color: black;
 }
 
 @media (min-width: 600px) {
