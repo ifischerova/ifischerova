@@ -92,7 +92,7 @@ span:after {
 }
 
 footer div i:hover,
-footer div a:focus {
+footer div i:focus {
     background-image: linear-gradient(to right, #5f0a87, #a4508b);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -109,7 +109,7 @@ footer div a:focus {
 
 @layer utilities {
     .is-responsive {
-      @apply  flex grow flex-col justify-center items-center;
+      @apply  flex flex-col justify-center items-center;
     }
 
     .menu-links {
