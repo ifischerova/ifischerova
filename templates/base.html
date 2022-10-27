@@ -24,12 +24,12 @@
 <body class="is-responsive m-auto p-0 min-h-screen font-normal text-base  bg-slate-300">
     <main class="is-responsive w-full">
         <header
-            class="flex grow flex-row items-center m-0 px-3 w-full !h-[150px] bg-gradient-to-r from-black-begin to-black-end text-slate-300">
+            class="flex flex-row items-center m-0 px-3 w-full bg-gradient-to-r from-black-begin to-black-end text-slate-300">
             <div class=" w-4/5">
                 <a class="font-bold my-4 text-2xl sm:text-4xl md:w-2/5"
                     href="{{ url_for('get_main_page') }}"><span>ifischerova.cz</span></a>
                 <p class="w-full text-left font-bold italic">
-                    "To jsem ještě nikdy nedělala. 
+                    "To jsem ještě nikdy nedělala.
                     <br>
                     To mi určitě půjde."
                 </p>
@@ -49,22 +49,22 @@
                 <div class="line"></div>
             </div>
         </header>
-        <hr class="p-1 w-full">
+        <hr class="py-1 w-full">
         {% block content %}{% endblock %}
-        <hr class="p-1 w-full">
-        <footer
-            class="m-0 p-4 w-full text-center h-[150px] bg-gradient-to-r from-black-begin to-black-end text-slate-300">
+        <hr class="py-1 w-full">
+        <footer class="m-0 p-4 w-full text-center bg-gradient-to-r from-black-begin to-black-end text-slate-300">
             {% block footer %}
             <div class="inline-block w-full">
-                <i class="fa-brands fa-square-github text-6xl mx-3"><a href="https://github.com/ifischerova"></a></i>
+                <a href="https://github.com/ifischerova" target="_blank"><i
+                        class="fa-brands fa-square-github text-4xl mx-3"></i></a>
 
-                <i class="fa-brands fa-linkedin text-6xl mx-3"><a
-                        href="https://www.linkedin.com/in/iva-fischerova/"></a></i>
+                <a href="https://www.linkedin.com/in/iva-fischerova/" target="_blank"><i
+                        class="fa-brands fa-linkedin text-4xl mx-3"></i></a>
 
-                <i class="fa-brands fa-square-twitter text-6xl mx-3"><a
-                        href="https://twitter.com/ifischerova_cz"></a></i>
+                <a href="https://twitter.com/ifischerova_cz" target="_blank"><i
+                        class="fa-brands fa-square-twitter text-4xl mx-3"></i></a>
             </div>
-            <div class="pt-3 text-2xl">
+            <div class="pt-3 text-xl">
                 Iva Fischerová &copy; 2022 | <a href="mailto:info@ifischerova.cz"><span>me@ifischerova.cz</span></a>
             </div>
             {% endblock %}
