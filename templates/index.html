@@ -3,32 +3,36 @@
 {% endblock %}
 
 {% block content %}
-<section class="is-responsive p-5 w-4/5">
-  <h1 class="m-6 font-bold text-center text-3xl">Actual blog posts</h1>
-  <div class="relative py-3 mt-3">
+<section class="is-responsive grow p-4">
+  <h1 class="font-bold text-center text-3xl">Nejnovější posty
+  </h1>
+  <div class="">
     <a class="article-link" href="{{ url_for('get_blog_page') }}">
-    <h2 class="my-2 font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2></a>
+      <h2 class="font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2>
+    </a>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse saepe explicabo veritatis vel dolore illo natus
       nemo quis omnis ipsam, alias labore eveniet maiores distinctio iste optio, dicta cumque minima.
       <a class="article-link font-bold" href="{{ url_for('get_blog_page') }}"><span>Celý článek</span></a>
     </p>
   </div>
-  <div class="relative py-3 mt-3">
+  <div class="">
     <a class="article-link" href="{{ url_for('get_blog_page') }}">
-    <h2 class="my-2 font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2></a>
+      <h2 class="font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2>
+    </a>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse saepe explicabo veritatis vel dolore illo natus
       nemo quis omnis ipsam, alias labore eveniet maiores distinctio iste optio, dicta cumque minima.
       <a class="article-link font-bold" href="{{ url_for('get_blog_page') }}"><span>Celý článek</span></a>
     </p>
   </div>
-  <div class="relative py-3 mt-3">
-  <a class="article-link" href="{{ url_for('get_blog_page') }}">
-  <h2 class="my-2 font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2></a>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse saepe explicabo veritatis vel dolore illo natus
-    nemo quis omnis ipsam, alias labore eveniet maiores distinctio iste optio, dicta cumque minima.
-    <a class="article-link font-bold" href="{{ url_for('get_blog_page') }}"><span>Celý článek</span></a>
-  </p>
-</div>
+  <div class="">
+    <a class="article-link" href="{{ url_for('get_blog_page') }}">
+      <h2 class="font-bold text-xl"><span>Lorem ipsum dolor sit amet.</span></h2>
+    </a>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse saepe explicabo veritatis vel dolore illo natus
+      nemo quis omnis ipsam, alias labore eveniet maiores distinctio iste optio, dicta cumque minima.
+      <a class="article-link font-bold" href="{{ url_for('get_blog_page') }}"><span>Celý článek</span></a>
+    </p>
+  </div>
 </section>
 
 {% endblock %}
