@@ -29,11 +29,12 @@
 
         <div class="nav">
             <nav class="w-full h-3/5 flex flex-col justify-center">
-                <a class="hamburger-menu-links" href="{{ url_for('get_about_page') }}"><span>O MNĚ</span></a><br>
-                <a class="hamburger-menu-links" href="{{ url_for('get_blog_page') }}"><span>BLOG</span></a><br>
-                <a class="hamburger-menu-links" href="{{ url_for('get_projects_page') }}"><span>PROJEKTY</span></a><br>
+                <a class="hamburger-menu-links" href="{{ url_for('get_about_page') }}"><span>O mně</span></a><br>
+                <a class="hamburger-menu-links" href="{{ url_for('get_blog_page') }}"><span>Blog</span></a><br>
+                <a class="hamburger-menu-links" href="{{ url_for('get_projects_page') }}"><span>Projekty</span></a><br>
             </nav>
         </div>
+
 <!-- end of hamburger menu -->
         <header
             class="flex flex-row items-center md:p-4 m-0 w-full bg-gradient-to-r from-black-begin to-black-end text-slate-300">
@@ -47,6 +48,7 @@
                     To mi určitě půjde.
                 </q>
             </div>
+
 <!-- hamburger icon -->
             <label for="toggle" class="hamburger z-50 w-1/5 mr-4 md:hidden" onclick="toggleIcon()" id="hamburger">
                 <div class="line"></div>
@@ -54,15 +56,16 @@
                 <div class="line"></div>
             </label>
 <!-- end of hamburger icon -->
+
 <!-- desktop menu -->
             <div class="hidden md:inline-block md:w-3/5 md:text-right" id="sidebar-menu">
-                <a class="menu-links " href="{{ url_for('get_about_page') }}"><span>O mně</span> <span
-                        class="sr-only">vybráno</span></a>
-                <a class="menu-links" href="{{ url_for('get_blog_page') }}"><span> Blog </span> </a>
+                <a class="menu-links" href="{{ url_for('get_about_page') }}"><span>O mně</span></a>
+                <a class="menu-links" href="{{ url_for('get_blog_page') }}"><span>Blog</span> </a>
                 <a class="menu-links" href="{{ url_for('get_projects_page') }}"><span>Projekty</span> </a>
             </div>
 <!-- end of desktop menu -->
         </header>
+
         <hr class="py-1 w-full">
         {% block content %}{% endblock %}
         <hr class="py-1 w-full">

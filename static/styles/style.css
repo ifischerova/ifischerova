@@ -144,10 +144,10 @@ footer div i:focus {
   }
 
   .hamburger-menu-links {
-    @apply font-bold w-full p-5 text-3xl text-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 hover:scale-110 focus:scale-110;
+    @apply uppercase font-bold w-full p-5 text-3xl text-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 hover:scale-110 focus:scale-110;
   }
 
   .menu-links {
-    @apply font-bold w-full px-4 text-2xl text-center text-slate-300 hover:text-slate-300 focus:text-slate-300 hover:scale-125 focus:scale-125;
+    @apply font-bold w-full px-4 text-2xl text-center text-slate-300 hover:text-slate-300 focus:text-slate-300 hover:scale-110 focus:scale-110;
   }
 }
