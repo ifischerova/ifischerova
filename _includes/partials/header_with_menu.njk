@@ -1,0 +1,43 @@
+<!-- hamburger menu -->
+<input id="toggle" type="checkbox"></input>
+
+    <div class="nav">
+        <nav class="w-full h-3/5 flex flex-col justify-center">
+            <a class="hamburger-menu-links" href="#about"><span>O mně</span></a><br>
+            <a class="hamburger-menu-links" href="#projects"><span>Projekty</span></a><br>
+            <a class="hamburger-menu-links" href="#sources"><span>Zdroje</span></a><br>
+            <a class="hamburger-menu-links" href="#contact"><span>Kontakt</span></a><br>
+        </nav>
+    </div>
+
+<!-- end of hamburger menu -->
+<header
+    class="flex flex-row items-center md:p-4 m-0 w-full bg-gradient-to-r from-black-begin to-black-end text-slate-300">
+    <div class="w-4/5 my-4 ml-4">
+        <a class="font-bold my-4 text-2xl sm:text-4xl md:w-2/5"
+            href=""><span>ifischerova.cz</span></a>
+        <br>
+        <q class="w-full text-left font-bold italic hidden sm:block">
+            To jsem ještě nikdy nedělala.
+            <br>
+            To mi určitě půjde.
+        </q>
+    </div>
+
+<!-- hamburger icon -->
+    <label for="toggle" class="hamburger z-50 w-1/5 mr-4 md:hidden" onclick="toggleIcon()" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+<!-- end of hamburger icon -->
+
+<!-- desktop menu -->
+    <div class="hidden md:inline-block md:w-3/5 md:text-right" id="sidebar-menu">
+        <a class="menu-links" href="#about"><span>O mně</span></a>
+        <a class="menu-links" href="#projects"><span>Projekty</span> </a>
+        <a class="menu-links" href="#sources"><span>Zdroje</span> </a>
+            <a class="menu-links" href="#contact"><span>Kontakt</span> </a>
+    </div>
+<!-- end of desktop menu -->
+</header>
