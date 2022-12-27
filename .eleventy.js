@@ -5,6 +5,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("js");
 
+  eleventyConfig.addPassthroughCopy("src");
+
   return {
     templateFormats: ["njk", "html", "md"],
 
