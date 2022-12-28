@@ -667,20 +667,6 @@ html {
   background-color: rgb(36 0 70 / var(--tw-bg-opacity));
 }
 
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.from-black-begin {
-  --tw-gradient-from: #7F8c8D;
-  --tw-gradient-to: rgb(127 140 141 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-black-end {
-  --tw-gradient-to: #000000;
-}
-
 .p-0 {
   padding: 0px;
 }
@@ -752,8 +738,6 @@ html {
   line-height: 2rem;
   font-weight: 600;
   text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .nav__item:hover {
@@ -776,8 +760,6 @@ html {
   line-height: 2.25rem;
   font-weight: 600;
   text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgb(23 23 23 / var(--tw-text-opacity));
   text-decoration-line: none;
 }
 
@@ -785,16 +767,12 @@ html {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-text-opacity: 1;
-  color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
 .nav__item--hamburger:focus {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-text-opacity: 1;
-  color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
 .nav__item__btn {
@@ -841,7 +819,7 @@ html {
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(23 23 23 / var(--tw-border-opacity));
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
   background-color: transparent;
   text-align: center;
   font-weight: 200;
@@ -895,23 +873,23 @@ html {
 
 #hamburger.is-active .line:nth-child(2) {
   width: 0px;
-  background-color: black;
+  background-color: #cbd5e1;
 }
 
 #hamburger.is-active .line:nth-child(1),
 #hamburger.is-active .line:nth-child(3) {
   transition-delay: 0.3s;
-  background-color: black;
+  background-color: #cbd5e1;
 }
 
 #hamburger.is-active .line:nth-child(1) {
   transform: translateY(13px);
-  background-color: black;
+  background-color: #cbd5e1;
 }
 
 #hamburger.is-active .line:nth-child(3) {
   transform: translateY(-13px) rotate(90deg);
-  background-color: black;
+  background-color: #cbd5e1;
 }
 
 #toggle {
