@@ -18,8 +18,8 @@ html {
 }
 
 .line {
-  width: 50px;
-  height: 5px;
+  width: 40px;
+  height: 2px;
   background-color: #cbd5e1;
   display: block;
   margin: 8px auto;
@@ -55,18 +55,18 @@ html {
 }
 
 #hamburger.is-active .line:nth-child(1) {
-  -webkit-transform: translateY(13px);
-  -ms-transform: translateY(13px);
-  -o-transform: translateY(13px);
-  transform: translateY(13px);
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
   background-color: #cbd5e1;
 }
 
 #hamburger.is-active .line:nth-child(3) {
-  -webkit-transform: translateY(-13px) rotate(90deg);
-  -ms-transform: translateY(-13px) rotate(90deg);
-  -o-transform: translateY(-13px) rotate(90deg);
-  transform: translateY(-13px) rotate(90deg);
+  -webkit-transform: translateY(-10px) rotate(90deg);
+  -ms-transform: translateY(-10px) rotate(90deg);
+  -o-transform: translateY(-10px) rotate(90deg);
+  transform: translateY(-10px) rotate(90deg);
   background-color: #cbd5e1;
 }
 
@@ -146,11 +146,12 @@ footer div i:focus {
   }
 
   .nav__item {
-    @apply uppercase font-semibold w-full px-4 text-2xl text-center hover:scale-110 focus:scale-110;
+    @apply uppercase font-light w-full px-4 text-2xl text-center hover:scale-110 focus:scale-110;
   }
 
   .nav__item--hamburger {
-    @apply uppercase no-underline font-semibold w-full p-5 text-3xl text-center hover:scale-110 focus:scale-110;
+    @apply uppercase no-underline font-light w-full p-5 text-2xl text-center hover:text-slate-300 focus:text-slate-300   
+    hover:scale-110 focus:scale-110;
   }
 
   .nav__item__btn {
@@ -160,8 +161,9 @@ footer div i:focus {
   }
 
   .nav__item__btn--hamburger {
-    @apply overflow-hidden bg-transparent max-w-[160px] text-center hover:text-slate-300 focus:text-slate-300
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent rounded;
+    @apply overflow-hidden bg-transparent max-w-[160px] hover:text-slate-300 focus:text-slate-300
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start
+    focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent rounded;
   }
 
 }

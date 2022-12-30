@@ -689,9 +689,9 @@ html {
   line-height: 1.5rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-xl {
@@ -704,9 +704,9 @@ html {
   line-height: 2rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-normal {
@@ -715,6 +715,10 @@ html {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .text-slate-300 {
@@ -736,7 +740,7 @@ html {
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -756,9 +760,9 @@ html {
   width: 100%;
   padding: 1.25rem;
   text-align: center;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
   text-transform: uppercase;
   text-decoration-line: none;
 }
@@ -767,12 +771,16 @@ html {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .nav__item--hamburger:focus {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .nav__item__btn {
@@ -821,7 +829,6 @@ html {
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
   background-color: transparent;
-  text-align: center;
   font-weight: 200;
 }
 
@@ -857,8 +864,8 @@ html {
 }
 
 .line {
-  width: 50px;
-  height: 5px;
+  width: 40px;
+  height: 2px;
   background-color: #cbd5e1;
   display: block;
   margin: 8px auto;
@@ -883,12 +890,12 @@ html {
 }
 
 #hamburger.is-active .line:nth-child(1) {
-  transform: translateY(13px);
+  transform: translateY(10px);
   background-color: #cbd5e1;
 }
 
 #hamburger.is-active .line:nth-child(3) {
-  transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-10px) rotate(90deg);
   background-color: #cbd5e1;
 }
 

@@ -13,10 +13,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        "silver-begin": "#2E4057",
-        "silver-end": "#DBCBD8",
-        "black-begin": "#7F8c8D",
-        "black-end": "#000000",
         "violet-start": "#A4508B",
         "violet-end": "#5F0A87",
         "very-dark-violet": "#10002B",
