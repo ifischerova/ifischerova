@@ -149,11 +149,11 @@ footer div i:focus {
     @apply flex flex-col justify-center items-center;
   }
 
-  .hamburger-menu-links {
+  .nav__item--hamburger {
     @apply uppercase font-bold w-full p-5 text-3xl text-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 hover:scale-110 focus:scale-110;
   }
 
-  .menu-links {
+  .nav__item {
     @apply uppercase font-bold w-full px-4 text-2xl text-center text-slate-300 hover:text-slate-300 focus:text-slate-300 hover:scale-110 focus:scale-110;
   }
 }
