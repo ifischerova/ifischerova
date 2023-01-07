@@ -569,10 +569,6 @@ video {
   margin: 0px;
 }
 
-.m-3 {
-  margin: 0.75rem;
-}
-
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -619,10 +615,6 @@ video {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-}
-
-.h-1\/5 {
-  height: 20%;
 }
 
 .min-h-screen {
@@ -690,10 +682,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .py-1 {
@@ -954,10 +942,6 @@ footer div i:focus {
 }
 
 @media (min-width: 900px) {
-  .md\:m-5 {
-    margin: 1.25rem;
-  }
-
   .md\:inline-block {
     display: inline-block;
   }
