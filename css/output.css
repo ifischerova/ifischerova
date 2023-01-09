@@ -787,6 +787,7 @@ video {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+  text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }

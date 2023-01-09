@@ -22,8 +22,8 @@ module.exports = {
       },
     },
   },
-  fontFamily: {
-    sans: ["Open Sans", "sans-serif"],
-  },
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+    },
   plugins: [],
 };

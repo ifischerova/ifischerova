@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: Poppins, sans-serif;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -148,6 +154,6 @@ footer div i:focus {
   }
 
   .menu-links {
-    @apply font-bold w-full px-4 text-2xl text-center text-slate-300 hover:text-slate-300 focus:text-slate-300 hover:scale-110 focus:scale-110;
+    @apply uppercase font-bold w-full px-4 text-2xl text-center text-slate-300 hover:text-slate-300 focus:text-slate-300 hover:scale-110 focus:scale-110;
   }
 }
