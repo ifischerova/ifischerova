@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src");
 
   return {
-    templateFormats: ["njk", "html", "md"],
+    templateFormats: ["njk", "html"],
 
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
