@@ -158,12 +158,14 @@ footer div i:focus {
   }
 
   .nav__item__btn {
-    @apply focus:overflow-hidden hover:overflow-hidden hover:scale-100 focus:scale-100 bg-transparent w-1/6 py-2 mx-2 hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent rounded;
+    @apply overflow-hidden hover:scale-100 focus:scale-100 bg-transparent w-1/6 py-2 mx-2 
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start
+    focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent rounded;
   }
 
   .nav__item__btn--hamburger {
     @apply overflow-hidden bg-transparent w-3/5 text-center hover:text-slate-300 focus:text-slate-300
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent rounded;
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end font-extralight border border-neutral-900 hover:border-transparent rounded;
   }
 
 }
