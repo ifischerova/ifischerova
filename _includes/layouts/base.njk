@@ -40,8 +40,11 @@
 
         {% include 'partials/header_with_menu.njk' %}
 
-        
-        {{ content | safe }}
+        {% include 'partials/about.njk' %}
+
+        {% include 'partials/portfolio.njk' %}
+
+        {% include 'partials/contact.njk' %}
 
         {% include 'partials/footer.njk' %}
 
