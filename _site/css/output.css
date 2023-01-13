@@ -611,8 +611,8 @@ html {
   height: 100%;
 }
 
-.h-3\/5 {
-  height: 60%;
+.h-4\/5 {
+  height: 80%;
 }
 
 .h-min {
@@ -782,18 +782,23 @@ html {
   text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
+  text-decoration-line: none;
 }
 
 .nav__item--hamburger:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
 .nav__item--hamburger:focus {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
 .nav__item__btn {
@@ -836,12 +841,14 @@ html {
 }
 
 .nav__item__btn--hamburger {
+  width: 60%;
   overflow: hidden;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
   background-color: transparent;
+  text-align: center;
   font-weight: 200;
 }
 
