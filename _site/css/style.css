@@ -164,7 +164,7 @@ footer div i:focus {
   }
 
   .nav__item__btn--hamburger {
-    @apply overflow-hidden bg-transparent w-3/5 text-center hover:text-slate-300 focus:text-slate-300
+    @apply overflow-hidden bg-transparent max-w-[160px] text-center hover:text-slate-300 focus:text-slate-300
     hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end font-extralight border border-neutral-900 hover:border-transparent rounded;
   }
 

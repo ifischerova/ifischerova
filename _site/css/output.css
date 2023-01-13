@@ -611,8 +611,8 @@ html {
   height: 100%;
 }
 
-.h-4\/5 {
-  height: 80%;
+.h-screen {
+  height: 100vh;
 }
 
 .h-min {
@@ -653,8 +653,8 @@ html {
   align-items: center;
 }
 
-.justify-center {
-  justify-content: center;
+.justify-start {
+  justify-content: flex-start;
 }
 
 .overflow-x-hidden {
@@ -805,6 +805,7 @@ html {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   width: 16.666667%;
+  overflow: hidden;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -819,7 +820,6 @@ html {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  overflow: hidden;
   border-color: transparent;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   --tw-gradient-from: #A4508B;
@@ -832,7 +832,6 @@ html {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  overflow: hidden;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   --tw-gradient-from: #A4508B;
   --tw-gradient-to: rgb(164 80 139 / 0);
@@ -841,7 +840,7 @@ html {
 }
 
 .nav__item__btn--hamburger {
-  width: 60%;
+  max-width: 160px;
   overflow: hidden;
   border-radius: 0.25rem;
   border-width: 1px;
