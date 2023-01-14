@@ -141,9 +141,13 @@ footer div i:focus {
 }
 
 @layer utilities {
+ /* global */
+
   .is-responsive {
     @apply flex flex-col justify-center items-center;
   }
+
+  /* menu */
 
   .nav__item {
     @apply uppercase font-light w-full px-4 text-2xl text-center hover:scale-110 focus:scale-110;
@@ -164,6 +168,27 @@ footer div i:focus {
     @apply overflow-hidden bg-transparent max-w-[160px] hover:text-slate-300 focus:text-slate-300
     hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start
     focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent rounded;
+  }
+
+  /* about me section */
+  .about {
+    @apply grow;
+  }
+
+  .about__title {
+    @apply uppercase font-medium text-center text-2xl;
+  }
+
+  .about__cards {
+    @apply grid 
+  }
+
+  .about__cards__items {
+
+  }
+
+  .about__text {
+    @apply font-light text-lg p-2;
   }
 
 }

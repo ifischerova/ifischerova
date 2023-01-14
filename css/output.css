@@ -689,6 +689,10 @@ html {
   padding: 0px;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -716,14 +720,14 @@ html {
   line-height: 2.25rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-5xl {
@@ -748,12 +752,16 @@ html {
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
+/* global */
+
 .is-responsive {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+/* menu */
 
 .nav__item {
   width: 100%;
@@ -873,6 +881,34 @@ html {
   --tw-gradient-to: #5F0A87;
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+/* about me section */
+
+.about {
+  flex-grow: 1;
+}
+
+.about__title {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.about__cards {
+  display: grid;
+}
+
+.about__cards__items {
+}
+
+.about__text {
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 300;
 }
 
 html {
