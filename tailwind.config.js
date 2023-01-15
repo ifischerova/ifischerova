@@ -20,9 +20,9 @@ module.exports = {
         "very-dark-violet": "#10002B",
       },
     },
-  },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
     },
+  },
   plugins: [],
 };
