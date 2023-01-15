@@ -167,7 +167,7 @@ footer div i:focus {
   .nav__item__btn--hamburger {
     @apply overflow-hidden bg-transparent max-w-[160px] hover:text-slate-300 focus:text-slate-300
     hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start
-    focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent rounded;
+    focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent focus:border-transparent rounded;
   }
 
   /* about me section */
@@ -176,12 +176,14 @@ footer div i:focus {
   }
 
   .about__cards {
-    @apply grid grid-cols-1 sm:grid-cols-4 gap-4 pt-8 pb-8 justify-items-center;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-8 pb-8 justify-items-center;
   }
 
   .about__cards__item {
-    @apply flex flex-col justify-start items-center w-full max-w-[95%] h-[190px] p-8 border border-slate-300 rounded bg-gradient-to-b from-violet to-dark-violet focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end focus:scale-110
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end hover:scale-110;
+    @apply flex flex-col justify-start items-center w-full max-w-[95%] h-[190px] p-8
+    rounded bg-gradient-to-b from-violet to-dark-violet 
+    focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
   }
 
   .about__cards__item__title {
@@ -201,7 +203,7 @@ footer div i:focus {
   }
 
   .about__text__link {
-    @apply no-underline font-semibold  hover:text-slate-300 hover:scale-110 focus:text-slate-300 focus:scale-110;
+    @apply no-underline font-semibold  hover:text-slate-300 focus:text-slate-300;
   }
 
 }
