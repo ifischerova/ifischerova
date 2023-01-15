@@ -172,7 +172,7 @@ footer div i:focus {
 
   /* about me section */
   .about__title {
-    @apply uppercase font-medium text-center text-3xl;
+    @apply font-medium text-center text-3xl;
   }
 
   .about__cards {
@@ -193,7 +193,7 @@ footer div i:focus {
   }
 
   .about__text {
-    @apply text-center font-normal text-lg pt-8 pb-8;
+    @apply text-center font-normal text-lg pt-8 pb-4;
   }
 
   .about__text__item {
