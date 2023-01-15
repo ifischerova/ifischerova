@@ -171,24 +171,37 @@ footer div i:focus {
   }
 
   /* about me section */
-  .about {
-    @apply grow;
-  }
-
   .about__title {
-    @apply uppercase font-medium text-center text-2xl;
+    @apply uppercase font-medium text-center text-3xl;
   }
 
   .about__cards {
-    @apply grid 
+    @apply grid grid-cols-1 sm:grid-cols-4 gap-4 pt-8 pb-8 justify-items-center;
   }
 
-  .about__cards__items {
+  .about__cards__item {
+    @apply flex flex-col justify-start items-center w-full max-w-[95%] h-[190px] p-8 border border-slate-300 rounded bg-gradient-to-b from-violet to-dark-violet focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end focus:scale-110
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end hover:scale-110;
+  }
 
+  .about__cards__item__title {
+    @apply uppercase font-medium text-lg;
+  }
+
+  .about__cards__item__text {
+    @apply font-normal text-center mt-4;
   }
 
   .about__text {
-    @apply font-light text-lg p-2;
+    @apply text-center font-normal text-lg pt-8 pb-8;
+  }
+
+  .about__text__item {
+    @apply mt-2 mb-2;
+  }
+
+  .about__text__link {
+    @apply no-underline font-semibold  hover:text-slate-300 hover:scale-110 focus:text-slate-300 focus:scale-110;
   }
 
 }
