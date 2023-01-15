@@ -989,6 +989,17 @@ html {
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
+.about__text__link span {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #A4508B;
+  --tw-gradient-to: rgb(164 80 139 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5F0A87;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -1070,7 +1081,7 @@ footer a:focus {
 span {
   display: inline-block;
   position: relative;
-  padding: 0 4px 8px 4px;
+  padding: 0 2px 4px 2px;
 }
 
 span:after {
@@ -1078,7 +1089,7 @@ span:after {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 4px;
+  height: 2px;
   bottom: 0;
   left: 0;
   background: linear-gradient(to right, #5f0a87, #a4508b);
@@ -1100,12 +1111,6 @@ footer div i:focus {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-}
-
-.article-link:hover,
-.article-link:focus {
-  text-decoration: none;
-  color: black;
 }
 
 @media (min-width: 600px) {

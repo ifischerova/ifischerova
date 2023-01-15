@@ -102,7 +102,7 @@ footer a:focus {
 span {
   display: inline-block;
   position: relative;
-  padding: 0 4px 8px 4px;
+  padding: 0 2px 4px 2px;
 }
 
 span:after {
@@ -110,7 +110,7 @@ span:after {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 4px;
+  height: 2px;
   bottom: 0;
   left: 0;
   background: linear-gradient(to right, #5f0a87, #a4508b);
@@ -132,12 +132,6 @@ footer div i:focus {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-}
-
-.article-link:hover,
-.article-link:focus {
-  text-decoration: none;
-  color: black;
 }
 
 @layer utilities {
@@ -203,7 +197,11 @@ footer div i:focus {
   }
 
   .about__text__link {
-    @apply no-underline font-semibold  hover:text-slate-300 focus:text-slate-300;
+    @apply no-underline font-semibold hover:text-slate-300 focus:text-slate-300;
+  }
+
+  .about__text__link span {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-start to-violet-end;
   }
 
 }
