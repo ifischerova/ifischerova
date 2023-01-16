@@ -242,6 +242,10 @@ footer div i:focus {
     @apply uppercase text-center font-medium text-lg;
   }
 
+  .portfolio__card__image {
+    @apply block m-auto h-[250px] my-8 hover:scale-110;
+  }
+
   .portfolio__card__description {
     @apply text-center p-4 font-light text-sm;
   }
