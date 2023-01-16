@@ -33,7 +33,7 @@
 
 </head>
 
-<body class="is-responsive m-auto p-0 min-h-screen font-normal text-base text-slate-300 overflow-x-hidden">
+<body class="is-responsive m-auto p-0 min-h-screen bg-very-dark-violet font-normal text-base text-slate-300 overflow-x-hidden">
 
         <!-- hamburger menu -->
 <input id="toggle" type="checkbox"></input>
@@ -73,7 +73,7 @@
 <!-- end of desktop menu -->
 </header>
 
-    <main class="is-responsive w-full p-8 min-h-screen bg-very-dark-violet">
+    <main class="is-responsive max-w-[1400px] p-8 min-h-screen bg-very-dark-violet">
 
         <section id="about" class="about">
     <h2 class="about__title">Hi, I'm Iva.</h2>
@@ -152,48 +152,137 @@
         <section id="portfolio" class="portfolio">
     <h2 class="portfolio__title">Portfolio</h2>
 
-    <ul class="portfolio__cards">
-        <li class="portfolio__card">
-            <h3 class="portfolio__card__title"></h3>
-            <img class="portfolio__card__image" alt="">
-            <div class="portfolio__card__buttons">
-                <a class="portfolio__card__button--github" href="" aria-label=""></a>
-                <a class="portfolio__card__button--demo" href="" aria-label=""></a>
-            </div>
-        </li>
-        <li class="portfolio__card">
-            <h3 class="portfolio__card__title"></h3>
-            <img class="portfolio__card__image" alt="">
-            <div class="portfolio__card__buttons">
-                <a class="portfolio__card__button--github" href="" aria-label=""></a>
-                <a class="portfolio__card__button--demo" href="" aria-label=""></a>
-            </div>
-        </li>
-        <li class="portfolio__card">
-            <h3 class="portfolio__card__title"></h3>
-            <img class="portfolio__card__image" alt="">
-            <div class="portfolio__card__buttons">
-                <a class="portfolio__card__button--github" href="" aria-label=""></a>
-                <a class="portfolio__card__button--demo" href="" aria-label=""></a>
-            </div>
-        </li>
-        <li class="portfolio__card">
-            <h3 class="portfolio__card__title"></h3>
-            <img class="portfolio__card__image" alt="">
-            <div class="portfolio__card__buttons">
-                <a class="portfolio__card__button--github" href="" aria-label=""></a>
-                <a class="portfolio__card__button--demo" href="" aria-label=""></a>
-            </div>
-        </li>
-        <li class="portfolio__card">
-            <h3 class="portfolio__card__title"></h3>
-            <img class="portfolio__card__image" alt="">
-            <div class="portfolio__card__buttons">
-                <a class="portfolio__card__button--github" href="" aria-label=""></a>
-                <a class="portfolio__card__button--demo" href="" aria-label=""></a>
-            </div>
-        </li>
-    </ul>
+
+    <section class="portfolio__section--my-projects">
+        <h3 class="portfolio__section__title">My projects</h3>
+            <p class="portfolio__section__description">Here are the projects that are a result of my frustration of smth or my participation at hackathon events.</p>
+
+            <ul class="portfolio__section__cards">
+                <li class="portfolio__card">
+                    <h4 class="portfolio__card__title">News from kindergarten app - frontend</h4>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description">App that allows you to (un)subscribe to the all news that are published on the kindergarten's webpage.
+                        App with darkmode and Cypress tests.
+                    </p>
+                    <p class="portfolio__card__technologies">HTML, CSS (Tailwind), JS, Python (Flask), Cypress, CI/CD (GH Actions)</p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="https://github.com/ifischerova/ms-vinicna-info" aria-label="See the frontend and test's code of the app for checking the news on kindergarten's web page.">code</a>
+                        <a class="portfolio__card__button__demo" href="https://novinky-ze-skolky.ifischerova.cz/" aria-label="See and try the kindergarten app.">demo</a>
+                    </div>
+                </li>
+
+                <li class="portfolio__card">
+                    <h4 class="portfolio__card__title">News from kindergarten app - backend</h4>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description">The app is checking the kindergarten's 
+                        website every hour. If there is smth new it will be sent to your email box. 
+                        If some document is added it is attached to the email, too. </p>
+                    <p class="portfolio__card__technologies">Python, GH Actions</p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="https://github.com/ifischerova/-skolka-_news" aria-label="">code</a>
+                        <a class="portfolio__card__button__demo" href="https://novinky-ze-skolky.ifischerova.cz/" aria-label="">demo</a>
+                    </div>
+                </li>
+            </ul>
+    </section>
+
+    <section class="portfolio__section--frontendmentor-projects">
+        <h3 class="portfolio__section__title">Frontendmentor projects</h3>
+            <p class="portfolio__section__description"></p>
+            
+            <ul class="portfolio__section__cards">
+                <li class="portfolio__card">
+                    <h3 class="portfolio__card__title"></h3>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description"></p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="" aria-label=""></a>
+                        <a class="portfolio__card__button__demo" href="" aria-label=""></a>
+                    </div>
+                </li>
+                <li class="portfolio__card">
+                    <h3 class="portfolio__card__title"></h3>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description"></p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="" aria-label=""></a>
+                        <a class="portfolio__card__button__demo" href="" aria-label=""></a>
+                    </div>
+                </li>
+                <li class="portfolio__card">
+                    <h3 class="portfolio__card__title"></h3>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description"></p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="" aria-label=""></a>
+                        <a class="portfolio__card__button__demo" href="" aria-label=""></a>
+                    </div>
+                </li>
+                <li class="portfolio__card">
+                    <h3 class="portfolio__card__title"></h3>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description"></p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="" aria-label=""></a>
+                        <a class="portfolio__card__button__demo" href="" aria-label=""></a>
+                    </div>
+                </li>
+            </ul>
+    </section>
+
+    <section class="portfolio__section--vue-mastery-learnings">
+        <h3 class="portfolio__section__title">Vue mastery projects</h3>
+            <p class="portfolio__section__description"></p>
+
+            <ul class="portfolio__section__cards">
+                <li class="portfolio__card">
+                    <h4 class="portfolio__card__title"></h4>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description"></p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="" aria-label=""></a>
+                        <a class="portfolio__card__button__demo" href="" aria-label=""></a>
+                    </div>
+                </li>
+
+                <li class="portfolio__card">
+                    <h4 class="portfolio__card__title"></h4>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description"></p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="" aria-label=""></a>
+                        <a class="portfolio__card__button__demo" href="" aria-label=""></a>
+                    </div>
+                </li>
+            </ul>
+    </section>
+
+    <section class="portfolio__section--czechitas-projects">
+        <h3 class="portfolio__section__title">Czechitas projects</h3>
+            <p class="portfolio__section__description"></p>
+
+            <ul class="portfolio__section__cards">
+                <li class="portfolio__card">
+                    <h4 class="portfolio__card__title"></h4>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description"></p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="" aria-label=""></a>
+                        <a class="portfolio__card__button__demo" href="" aria-label=""></a>
+                    </div>
+                </li>
+
+                <li class="portfolio__card">
+                    <h4 class="portfolio__card__title"></h4>
+                    <img class="portfolio__card__image" src="" alt="">
+                    <p class="portfolio__card__description"></p>
+                    <div class="portfolio__card__buttons">
+                        <a class="portfolio__card__button__github" href="" aria-label=""></a>
+                        <a class="portfolio__card__button__demo" href="" aria-label=""></a>
+                    </div>
+                </li>
+            </ul>
+    </section>
 </section>
 
         <section id="contact" class="is-responsive grow p-4">

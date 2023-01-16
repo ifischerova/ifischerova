@@ -165,18 +165,21 @@ footer div i:focus {
   }
 
   /* about me section */
+  .about {
+    @apply w-full max-w-[1332px];
+  }
+
   .about__title {
-    @apply font-medium text-center text-3xl;
+    @apply font-semibold text-center text-3xl;
   }
 
   .about__cards {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-8 pb-8 justify-items-center;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-8 justify-items-center;
   }
 
   .about__cards__item {
-    @apply flex flex-col justify-start items-center w-full max-w-[95%] h-[190px] p-8
+    @apply flex flex-col justify-center sm:justify-start items-center w-full h-[190px] p-8
     rounded bg-gradient-to-b from-violet to-dark-violet 
-    focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end
     hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
   }
 
@@ -193,7 +196,7 @@ footer div i:focus {
   }
 
   .about__text__item {
-    @apply mt-2 mb-2;
+    @apply my-2;
   }
 
   .about__text__link {
@@ -202,6 +205,64 @@ footer div i:focus {
 
   .about__text__link span {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-start to-violet-end;
+  }
+
+  /* portfolio section */
+  .portfolio {
+    @apply max-w-[1332px];
+  }
+
+  .portfolio__title {
+    @apply uppercase font-semibold text-center text-3xl my-3;
+  }
+
+  .portfolio__section--my-projects {
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .portfolio__section__title {
+    @apply uppercase font-medium text-center text-2xl mt-5;
+  }
+
+  .portfolio__section__description {
+    @apply text-center my-5 px-8;
+  }
+
+  .portfolio__section__cards {
+    @apply grid grid-cols-1 justify-center items-center gap-8 lg:grid-cols-2 lg:grid-rows-1;
+  }
+
+  .portfolio__card {
+    @apply flex flex-col justify-center lg:justify-between items-center w-full h-full p-8
+    rounded bg-gradient-to-b from-violet to-dark-violet
+    hover:scale-105;
+  }
+
+  .portfolio__card__title {
+    @apply uppercase text-center font-medium text-lg;
+  }
+
+  .portfolio__card__description {
+    @apply text-center p-4 font-light text-sm;
+  }
+
+  .portfolio__card__technologies {
+    @apply text-center p-4;
+  }
+
+  .portfolio__card__buttons {
+    @apply flex flex-col justify-center items-center sm:flex-row mt-8;
+  }
+
+  .portfolio__card__button__github,
+  .portfolio__card__button__demo {
+    @apply uppercase block py-4 px-8 border border-slate-300 hover:border-transparent rounded
+    focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
+  }
+
+  .portfolio__card__button__demo {
+    @apply mt-5 sm:mt-0 sm:ml-8;
   }
 
 }
