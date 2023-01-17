@@ -2,11 +2,11 @@
 <input id="toggle" type="checkbox"></input>
 
     <div class="nav">
-        <nav class="w-full min-h-screen flex flex-col justify-start items-center bg-gradient-to-b from-violet to-dark-violet">
-            <a class="nav__item--hamburger" href="#about" aria-label="Read more about Iva Fischerova in the About section."><span>About</span></a><br>
-            <a class="nav__item--hamburger" href="#porfolio" aria-label="Discover Iva's porftolio."><span>Portfolio</span></a><br>
-            <a class="nav__item--hamburger" href="#contact" aria-label="Read how to contact Iva."><span>Contact</span></a><br>
-            <a class="nav__item--hamburger nav__item__btn--hamburger" href="/src/file.pdf" aria-label="Download Iva's CV."download="ficherova_iva_cv">Resume</a>
+        <nav class="w-full min-h-screen flex flex-col justify-start items-center bg-gradient-to-b from-violet to-dark-violet" id="hamburger-menu">
+            <a class="nav__item--hamburger" href="#about" onclick="closeHamburgerMenu()" aria-label="Read more about Iva Fischerova in the About section."><span>About</span></a><br>
+            <a class="nav__item--hamburger" href="#portfolio" onclick="closeHamburgerMenu()"  aria-label="Discover Iva's porftolio."><span>Portfolio</span></a><br>
+            <a class="nav__item--hamburger" href="#contact" onclick="closeHamburgerMenu()"  aria-label="Read how to contact Iva."><span>Contact</span></a><br>
+            <a class="nav__item--hamburger nav__item__btn--hamburger" onclick="closeHamburgerMenu()" href="/src/file.pdf" aria-label="Download Iva's CV."download="ficherova_iva_cv">Resume</a>
         </nav>
     </div>
 
