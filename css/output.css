@@ -1084,7 +1084,7 @@ html {
   gap: 2rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
   .portfolio__section__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(1, minmax(0, 1fr));
