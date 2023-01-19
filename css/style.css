@@ -5,6 +5,7 @@
 @layer base {
   html {
     font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
   }
 }
 
@@ -94,7 +95,9 @@ html {
 header a:hover,
 header a:focus,
 footer a:hover,
-footer a:focus {
+footer a:focus,
+.back__to__top__button a:hover,
+.back__to__top__button a:focus, {
   text-decoration: none;
   color: #cbd5e1;
 }
@@ -162,6 +165,13 @@ footer div i:focus {
     @apply overflow-hidden bg-transparent max-w-[160px] hover:text-slate-300 focus:text-slate-300
     hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start
     focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent focus:border-transparent rounded;
+  }
+
+  /* back to top button */
+  .back__to__top__button {
+    @apply p-2 text-slate-300 bg-transparent border rounded sticky bottom-5 place-self-end -mr-8 
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end hover:border-transparent focus:bg-gradient-to-r focus:from-violet-start
+    focus:to-violet-end focus:bg-transparent whitespace-nowrap grid-cols-none;
   }
 
   /* about me section */

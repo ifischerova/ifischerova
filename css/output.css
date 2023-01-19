@@ -418,6 +418,7 @@ video {
 
 html {
   font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
 }
 
 *, ::before, ::after {
@@ -593,6 +594,10 @@ html {
 
 .mr-4 {
   margin-right: 1rem;
+}
+
+.block {
+  display: block;
 }
 
 .inline-block {
@@ -890,6 +895,41 @@ html {
   --tw-gradient-to: #5F0A87;
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+/* back to top button */
+
+.back__to__top__button {
+  position: sticky;
+  bottom: 1.25rem;
+  margin-right: -2rem;
+  grid-template-columns: none;
+  place-self: end;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  background-color: transparent;
+  padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+.back__to__top__button:hover {
+  border-color: transparent;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #A4508B;
+  --tw-gradient-to: rgb(164 80 139 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5F0A87;
+}
+
+.back__to__top__button:focus {
+  background-color: transparent;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #A4508B;
+  --tw-gradient-to: rgb(164 80 139 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5F0A87;
 }
 
 /* about me section */
@@ -1285,7 +1325,9 @@ html {
 header a:hover,
 header a:focus,
 footer a:hover,
-footer a:focus {
+footer a:focus,
+.back__to__top__button a:hover,
+.back__to__top__button a:focus, {
   text-decoration: none;
   color: #cbd5e1;
 }
