@@ -1117,6 +1117,7 @@ html {
 }
 
 .portfolio__section__cards {
+  margin-bottom: 0.75rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   align-items: center;
