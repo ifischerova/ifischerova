@@ -908,9 +908,7 @@ html {
   position: sticky;
   bottom: 1.25rem;
   margin-right: -2rem;
-  grid-template-columns: none;
   place-self: end;
-  white-space: nowrap;
   border-radius: 0.25rem;
   border-width: 1px;
   background-color: transparent;
@@ -921,15 +919,6 @@ html {
 
 .back__to__top__button:hover {
   border-color: transparent;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #A4508B;
-  --tw-gradient-to: rgb(164 80 139 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #5F0A87;
-}
-
-.back__to__top__button:focus {
-  background-color: transparent;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   --tw-gradient-from: #A4508B;
   --tw-gradient-to: rgb(164 80 139 / 0);
@@ -1258,6 +1247,71 @@ html {
   }
 }
 
+/* contact section */
+
+.contact {
+  width: 100%;
+  max-width: 1332px;
+}
+
+.contact__title {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact__container {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .contact__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+  }
+}
+
+.contact__cards {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact__card {
+  display: flex;
+  height: 120px;
+  width: 120px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #5A189A;
+  --tw-gradient-to: rgb(90 24 154 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #240046;
+  padding: 1rem;
+}
+
+.contact__card:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #A4508B;
+  --tw-gradient-to: rgb(164 80 139 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5F0A87;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -1374,11 +1428,6 @@ footer div i:focus {
 }
 
 @media (min-width: 600px) {
-  .sm\:mx-3 {
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-  }
-
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;

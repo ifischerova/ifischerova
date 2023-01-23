@@ -170,8 +170,7 @@ footer div i:focus {
   /* back to top button */
   .back__to__top__button {
     @apply p-2 text-slate-300 bg-transparent border rounded sticky bottom-5 place-self-end -mr-8 
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end hover:border-transparent focus:bg-gradient-to-r focus:from-violet-start
-    focus:to-violet-end focus:bg-transparent whitespace-nowrap grid-cols-none;
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end hover:border-transparent;
   }
 
   /* about me section */
@@ -287,4 +286,25 @@ footer div i:focus {
     @apply mt-5 sm:mt-0 sm:ml-8;
   }
 
+  /* contact section */
+  .contact {
+    @apply w-full max-w-[1332px];
+  }
+
+  .contact__title {
+    @apply uppercase font-semibold text-center text-3xl my-3;
+  }
+
+  .contact__container {
+    @apply flex flex-col justify-center sm:grid sm:grid-cols-2 sm:justify-items-center items-center my-5;
+  }
+
+  .contact__cards {
+    @apply grid grid-cols-1 gap-8 items-center;
+  }
+
+  .contact__card {
+    @apply flex flex-col justify-center items-center w-[120px] h-[120px] p-4 rounded bg-gradient-to-b from-violet to-dark-violet 
+    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
+  }
 }
