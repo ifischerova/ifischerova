@@ -272,7 +272,7 @@ footer div i:focus {
   }
 
   .portfolio__card__buttons {
-    @apply flex flex-col justify-center items-center sm:flex-row mt-8;
+    @apply flex flex-col justify-center items-center md:flex-row mt-8;
   }
 
   .portfolio__card__button__github,
@@ -283,28 +283,52 @@ footer div i:focus {
   }
 
   .portfolio__card__button__demo {
-    @apply mt-5 sm:mt-0 sm:ml-8;
+    @apply mt-5 md:mt-0 md:ml-8;
   }
 
   /* contact section */
   .contact {
-    @apply w-full max-w-[1332px];
+    @apply w-full max-w-[1200px] sm:my-10;
   }
 
   .contact__title {
-    @apply uppercase font-semibold text-center text-3xl my-3;
+    @apply uppercase font-semibold text-center text-3xl my-3 sm:my-10;
   }
 
   .contact__container {
-    @apply flex flex-col justify-center sm:grid sm:grid-cols-2 sm:justify-items-center items-center my-5;
+    @apply flex flex-col justify-center sm:grid sm:grid-cols-2 sm:justify-items-center items-center my-5 gap-6;
   }
 
   .contact__cards {
-    @apply grid grid-cols-1 gap-8 items-center;
+    @apply grid grid-cols-1 items-center md:items-end gap-6;
   }
 
   .contact__card {
-    @apply flex flex-col justify-center items-center w-[120px] h-[120px] p-4 rounded bg-gradient-to-b from-violet to-dark-violet 
+    @apply flex flex-col justify-center items-center w-[120px] md:w-[200px] h-[120px] p-4 rounded 
+    bg-gradient-to-b from-violet to-dark-violet 
     hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
+  }
+
+  /* contact form */
+  .contact__form {
+    @apply w-full h-full flex flex-col justify-center items-center gap-6 my-8 sm:gap-8 md:my-0;
+  }
+
+  .contact__form__div {
+    @apply w-full border-violet border-solid border-2 rounded relative
+   hover:border-violet-start focus:border-violet-start;
+  }
+
+  .contact__form__label {
+    @apply bg-very-dark-violet text-violet sm:text-xl absolute -top-4 px-2;
+  }
+
+  .contact__form__input {
+    @apply w-full h-full p-4 bg-very-dark-violet;
+  }
+
+  .contact__form__submit__btn {
+    @apply w-5/6 md:w-1/2 lg:w-1/3 p-4 sm:ml-auto text-center text-violet border-violet border-solid border-2 rounded
+    hover:text-slate-300 hover:border-transparent hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
   }
 }

@@ -1,5 +1,5 @@
 <section id="contact" class="contact">
-    <h2 class="contact__title">Kontakt</h2>
+    <h2 class="contact__title">Contact Me</h2>
 
     <div class="contact__container">
         <ul class="contact__cards">
@@ -18,7 +18,19 @@
         </ul>
 
         <form id="contact-form" class="contact__form" action="" method="POST">
-            tady bude formualr
+            <div class="contact__form__div">
+                <label class="contact__form__label">Name & Surname</label>
+                <input class="contact__form__input" type="text" name="name-and-surname" required>
+            </div>
+            <div class="contact__form__div">
+                <label class="contact__form__label">Email</label>
+                <input class="contact__form__input" type="email" name="email" required>
+            </div>            
+            <div class="contact__form__div">
+                <label class="contact__form__label">Message</label>
+                <input class="contact__form__input" type="text" name="message" required>
+            </div>
+            <a href="" class="contact__form__submit__btn" aria-label="Click to send the message by email.">Send Message</a>
         </form>
    </div>
 </section>

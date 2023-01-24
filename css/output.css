@@ -1197,7 +1197,7 @@ html {
   justify-content: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .portfolio__card__buttons {
     flex-direction: row;
   }
@@ -1240,7 +1240,7 @@ html {
   margin-top: 1.25rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .portfolio__card__button__demo {
     margin-top: 0px;
     margin-left: 2rem;
@@ -1251,7 +1251,14 @@ html {
 
 .contact {
   width: 100%;
-  max-width: 1332px;
+  max-width: 1200px;
+}
+
+@media (min-width: 600px) {
+  .contact {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
 }
 
 .contact__title {
@@ -1264,6 +1271,13 @@ html {
   text-transform: uppercase;
 }
 
+@media (min-width: 600px) {
+  .contact__title {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
 .contact__container {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -1271,6 +1285,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 }
 
 @media (min-width: 600px) {
@@ -1285,7 +1300,13 @@ html {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .contact__cards {
+    align-items: flex-end;
+  }
 }
 
 .contact__card {
@@ -1310,6 +1331,127 @@ html {
   --tw-gradient-to: rgb(164 80 139 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #5F0A87;
+}
+
+@media (min-width: 900px) {
+  .contact__card {
+    width: 200px;
+  }
+}
+
+/* contact form */
+
+.contact__form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .contact__form {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact__form {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.contact__form__div {
+  position: relative;
+  width: 100%;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(90 24 154 / var(--tw-border-opacity));
+}
+
+.contact__form__div:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(164 80 139 / var(--tw-border-opacity));
+}
+
+.contact__form__div:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(164 80 139 / var(--tw-border-opacity));
+}
+
+.contact__form__label {
+  position: absolute;
+  top: -1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 0 43 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(90 24 154 / var(--tw-text-opacity));
+}
+
+@media (min-width: 600px) {
+  .contact__form__label {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.contact__form__input {
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 0 43 / var(--tw-bg-opacity));
+  padding: 1rem;
+}
+
+.contact__form__submit__btn {
+  width: 83.333333%;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(90 24 154 / var(--tw-border-opacity));
+  padding: 1rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(90 24 154 / var(--tw-text-opacity));
+}
+
+.contact__form__submit__btn:hover {
+  border-color: transparent;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #A4508B;
+  --tw-gradient-to: rgb(164 80 139 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5F0A87;
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+@media (min-width: 600px) {
+  .contact__form__submit__btn {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact__form__submit__btn {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact__form__submit__btn {
+    width: 33.333333%;
+  }
 }
 
 html {
