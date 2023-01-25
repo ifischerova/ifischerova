@@ -183,7 +183,7 @@ footer div i:focus {
   }
 
   .about__cards {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-8 justify-items-center;
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-8 py-8 justify-items-center;
   }
 
   .about__cards__item {
@@ -214,6 +214,27 @@ footer div i:focus {
 
   .about__text__link span {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-start to-violet-end;
+  }
+
+  /* experiences */
+  .experiences {
+    @apply max-w-[1332px];
+  }
+
+  .experiences__title {
+    @apply uppercase font-semibold text-center text-3xl my-3;
+  }
+
+  .experiences__container {
+    @apply grid grid-cols-2 gap-8 p-6 bg-gradient-to-b from-violet to-dark-violet;
+  }
+
+  .experiences__item {
+    @apply fill-very-dark-violet w-[80px] h-[80px] rounded hover:bg-gradient-to-r from-violet-start to-violet-end;
+  }
+
+  .experiences__item--last {
+    @apply m-auto;
   }
 
   /* portfolio section */
