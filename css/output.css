@@ -1207,8 +1207,15 @@ html {
 }
 
 .portfolio__card__technologies {
-  padding: 1rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio__card__technologies__item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  fill: #cbd5e1;
 }
 
 .portfolio__card__buttons {

@@ -289,7 +289,11 @@ footer div i:focus {
   }
 
   .portfolio__card__technologies {
-    @apply text-center p-4;
+    @apply flex justify-between;
+  }
+
+  .portfolio__card__technologies__item {
+    @apply fill-slate-300 rounded mx-2;
   }
 
   .portfolio__card__buttons {
