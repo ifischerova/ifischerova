@@ -940,64 +940,6 @@ html {
   font-weight: 600;
 }
 
-.about__cards {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  justify-items: center;
-  gap: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-@media (min-width: 600px) {
-  .about__cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.about__cards__item {
-  display: flex;
-  height: 190px;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.25rem;
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  --tw-gradient-from: #5A189A;
-  --tw-gradient-to: rgb(90 24 154 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #240046;
-  padding: 2rem;
-}
-
-.about__cards__item:hover {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #A4508B;
-  --tw-gradient-to: rgb(164 80 139 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #5F0A87;
-}
-
-@media (min-width: 600px) {
-  .about__cards__item {
-    justify-content: flex-start;
-  }
-}
-
-.about__cards__item__title {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.about__cards__item__text {
-  margin-top: 1rem;
-  text-align: center;
-  font-weight: 400;
-}
-
 .about__text {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -1038,6 +980,66 @@ html {
   color: transparent;
 }
 
+/* experience section */
+
+.experiences__cards {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+  .experiences__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.experiences__cards__item {
+  display: flex;
+  height: 190px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #5A189A;
+  --tw-gradient-to: rgb(90 24 154 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #240046;
+  padding: 2rem;
+}
+
+.experiences__cards__item:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #A4508B;
+  --tw-gradient-to: rgb(164 80 139 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #5F0A87;
+}
+
+@media (min-width: 600px) {
+  .experiences__cards__item {
+    justify-content: flex-start;
+  }
+}
+
+.experiences__cards__item__title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.experiences__cards__item__text {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 400;
+}
+
 /* experiences */
 
 .experiences {
@@ -1052,18 +1054,6 @@ html {
   line-height: 2.25rem;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-.experiences__container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  --tw-gradient-from: #5A189A;
-  --tw-gradient-to: rgb(90 24 154 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #240046;
-  padding: 1.5rem;
 }
 
 /* portfolio section */
