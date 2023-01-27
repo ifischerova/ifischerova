@@ -982,6 +982,20 @@ html {
 
 /* experience section */
 
+.experiences {
+  max-width: 1332px;
+}
+
+.experiences__title {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .experiences__cards {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1038,22 +1052,6 @@ html {
   margin-top: 1rem;
   text-align: center;
   font-weight: 400;
-}
-
-/* experiences */
-
-.experiences {
-  max-width: 1332px;
-}
-
-.experiences__title {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  text-align: center;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 /* portfolio section */
