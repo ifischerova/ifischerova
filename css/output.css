@@ -1174,8 +1174,8 @@ html {
 
 .portfolio__card__image {
   margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: block;
   height: 250px;
 }
@@ -1207,17 +1207,11 @@ html {
 }
 
 .portfolio__card__buttons {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-@media (min-width: 900px) {
-  .portfolio__card__buttons {
-    flex-direction: row;
-  }
 }
 
 .portfolio__card__button__github,
@@ -1227,10 +1221,10 @@ html {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-transform: uppercase;
 }
 
@@ -1254,14 +1248,7 @@ html {
 }
 
 .portfolio__card__button__demo {
-  margin-top: 1.25rem;
-}
-
-@media (min-width: 900px) {
-  .portfolio__card__button__demo {
-    margin-top: 0px;
-    margin-left: 2rem;
-  }
+  margin-left: 1rem;
 }
 
 /* contact section */

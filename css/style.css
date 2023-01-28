@@ -270,7 +270,7 @@ footer div i:focus {
   }
 
   .portfolio__card__image {
-    @apply block m-auto h-[250px] my-8 hover:scale-110;
+    @apply block m-auto h-[250px] my-4 hover:scale-110;
   }
 
   .portfolio__card__description {
@@ -286,18 +286,18 @@ footer div i:focus {
   }
 
   .portfolio__card__buttons {
-    @apply flex flex-col justify-center items-center md:flex-row mt-8;
+    @apply flex flex-row justify-center items-center mt-4;
   }
 
   .portfolio__card__button__github,
   .portfolio__card__button__demo {
-    @apply uppercase block py-4 px-8 border border-slate-300 hover:border-transparent rounded
+    @apply uppercase block py-2 px-4 border border-slate-300 hover:border-transparent rounded
     focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end
     hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
   }
 
   .portfolio__card__button__demo {
-    @apply mt-5 md:mt-0 md:ml-8;
+    @apply ml-4;
   }
 
   /* contact section */
