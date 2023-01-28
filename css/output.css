@@ -783,8 +783,8 @@ html {
 
 .nav__item {
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -802,6 +802,13 @@ html {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1200px) {
+  .nav__item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .nav__item--hamburger {
@@ -934,6 +941,8 @@ html {
 }
 
 .about__title {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   text-align: center;
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1070,7 +1079,8 @@ html {
   text-transform: uppercase;
 }
 
-.portfolio__section--my-projects {
+.portfolio__section--my-projects,
+  .portfolio__section--frontendmentor-projects {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1078,7 +1088,7 @@ html {
 }
 
 .portfolio__section__title {
-  margin-top: 1.25rem;
+  margin-top: 2.5rem;
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1123,6 +1133,7 @@ html {
 .portfolio__section__cards {
   margin-bottom: 0.75rem;
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
@@ -1187,7 +1198,7 @@ html {
 }
 
 .portfolio__card__description {
-  padding: 1rem;
+  padding-bottom: 1rem;
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1307,7 +1318,7 @@ html {
   gap: 1.5rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   .contact__cards {
     align-items: flex-end;
   }
@@ -1337,7 +1348,7 @@ html {
   --tw-gradient-to: #5F0A87;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   .contact__card {
     width: 200px;
   }
@@ -1363,7 +1374,7 @@ html {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   .contact__form {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -1446,7 +1457,7 @@ html {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   .contact__form__submit__btn {
     width: 50%;
   }
@@ -1585,7 +1596,7 @@ footer div i:focus {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   .md\:inline-block {
     display: inline-block;
   }
@@ -1596,6 +1607,10 @@ footer div i:focus {
 
   .md\:w-1\/5 {
     width: 20%;
+  }
+
+  .md\:w-5\/6 {
+    width: 83.333333%;
   }
 
   .md\:w-4\/5 {

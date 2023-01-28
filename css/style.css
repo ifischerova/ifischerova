@@ -147,7 +147,7 @@ footer div i:focus {
   /* menu */
 
   .nav__item {
-    @apply uppercase font-light w-full px-4 text-2xl text-center hover:scale-110 focus:scale-110;
+    @apply uppercase font-light w-full px-2 lg:px-4 text-2xl text-center hover:scale-110 focus:scale-110;
   }
 
   .nav__item--hamburger {
@@ -179,7 +179,7 @@ footer div i:focus {
   }
 
   .about__title {
-    @apply font-semibold text-center text-3xl;
+    @apply font-semibold text-center text-3xl my-3;
   }
 
   .about__text {
@@ -201,7 +201,7 @@ footer div i:focus {
 
   /* experience section */
   .experiences {
-    @apply max-w-[1332px];
+    @apply w-full max-w-[1332px];
   }
 
   .experiences__title {
@@ -235,12 +235,13 @@ footer div i:focus {
     @apply uppercase font-semibold text-center text-3xl my-3;
   }
 
-  .portfolio__section--my-projects {
+  .portfolio__section--my-projects,
+  .portfolio__section--frontendmentor-projects {
     @apply flex flex-col justify-center items-center;
   }
 
   .portfolio__section__title {
-    @apply uppercase font-medium text-center text-2xl mt-5;
+    @apply uppercase font-medium text-center text-2xl mt-10;
   }
 
   .portfolio__section__description {
@@ -256,7 +257,7 @@ footer div i:focus {
   }
 
   .portfolio__section__cards {
-    @apply grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-1 justify-center items-center gap-8 mb-3 ;
+    @apply grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-1 justify-center items-center gap-8 mb-3 w-full;
   }
 
   .portfolio__card {
@@ -274,7 +275,7 @@ footer div i:focus {
   }
 
   .portfolio__card__description {
-    @apply text-center p-4 font-light text-sm;
+    @apply text-center pb-4 font-light text-sm;
   }
 
   .portfolio__card__technologies {
