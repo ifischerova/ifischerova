@@ -992,6 +992,7 @@ html {
 /* experience section */
 
 .experiences {
+  width: 100%;
   max-width: 1332px;
 }
 
