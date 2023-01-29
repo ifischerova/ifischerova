@@ -17,7 +17,12 @@
             </li>
         </ul>
 
-        <form id="contact-form" class="contact__form" method="POST" data-netlify="true">
+        <form id="contact-form" class="contact__form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <div class="hidden">
+                <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+            </div>
             <div class="contact__form__div">
                 <label class="contact__form__label">Name &amp; Surname</label>
                 <input class="contact__form__input" type="text" name="name-and-surname" required>
