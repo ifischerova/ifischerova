@@ -17,9 +17,9 @@
             </li>
         </ul>
 
-        <form id="contact-form" class="contact__form" action="" method="POST">
+        <form id="contact-form" class="contact__form" method="POST" data-netlify="true">
             <div class="contact__form__div">
-                <label class="contact__form__label">Name & Surname</label>
+                <label class="contact__form__label">Name &amp; Surname</label>
                 <input class="contact__form__input" type="text" name="name-and-surname" required>
             </div>
             <div class="contact__form__div">
@@ -28,7 +28,7 @@
             </div>            
             <div class="contact__form__div">
                 <label class="contact__form__label">Message</label>
-                <input class="contact__form__input" type="text" name="message" required>
+                <textarea class="contact__form__input" rows="4" name="message" required></textarea>
             </div>
             <a href="" class="contact__form__submit__btn" aria-label="Click to send the message by email.">Send Message</a>
         </form>
