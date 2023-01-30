@@ -1,25 +1,10 @@
-function toggleIcon() {
-    document.getElementById('hamburger').classList.toggle("is-active");
-};
+import { closeHamburgerMenu, toggleIcon } from './menu.js'
+import { initScroll, scrollToTop }  from './scroll-button.js'
+import { initSubmit } from './form.js'
 
-function closeHamburgerMenu() {
-    toggleIcon();
-    this.document.getElementById('toggle').checked = false;
-};
+initScroll()
+initSubmit()
 
-window.onscroll = function() {
-    scrollFunction()
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById('top-button').style.display = "block";
-    } else {
-        document.getElementById('top-button').style.display = "none";
-    }
-}
-
-function scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
+window.closeHamburgerMenu = closeHamburgerMenu
+window.toggleIcon = toggleIcon
+window.scrollToTop = scrollToTop
