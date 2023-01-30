@@ -799,6 +799,11 @@ html {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 600;
+  text-transform: uppercase;
+}
+
+.section__title--about {
+  text-transform: none;
 }
 
 .text__link {
@@ -1509,6 +1514,7 @@ html {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 @media (min-width: 600px) {

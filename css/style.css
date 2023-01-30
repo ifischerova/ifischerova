@@ -166,7 +166,11 @@ footer div i:focus {
   }
 
   .section__title {
-    @apply font-semibold text-center text-3xl my-3;
+    @apply uppercase font-semibold text-center text-3xl my-3;
+  }
+
+  .section__title--about {
+    @apply normal-case;
   }
 
   .text__link {
