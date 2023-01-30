@@ -138,10 +138,19 @@ footer div i:focus {
 }
 
 @layer utilities {
- /* global */
+ /* GLOBALS */
 
   .is-responsive {
     @apply flex flex-col justify-center items-center;
+  }
+
+  .hover,
+  .focus {
+    @apply bg-gradient-to-r hover:from-violet-start hover:to-violet-end border-transparent;
+  }
+
+  .bg-gradient {
+    @apply bg-gradient-to-b from-violet to-dark-violet;
   }
 
   .body {
@@ -152,10 +161,44 @@ footer div i:focus {
     @apply is-responsive max-w-[1400px] p-8 min-h-screen bg-very-dark-violet;
   }
 
-  .nav__container {
-    @apply w-full min-h-screen flex flex-col justify-start items-center bg-gradient-to-b from-violet to-dark-violet;
+  .section {
+    @apply w-full max-w-[1332px];
   }
 
+  .section__title {
+    @apply font-semibold text-center text-3xl my-3;
+  }
+
+  .text__link {
+    @apply no-underline font-semibold hover:text-slate-300 focus:text-slate-300;
+  }
+
+  .text__link span {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-start to-violet-end;
+  }
+
+  .icon {
+    @apply text-3xl mx-3;
+  }
+
+  .button {
+    @apply overflow-hidden bg-transparent font-extralight border border-slate-300 rounded hover:hover focus:focus ;
+  }
+
+  /* DESKTOP NAVIGATION */
+  .nav__container {
+    @apply w-full min-h-screen flex flex-col justify-start items-center bg-gradient;
+  }
+
+  .nav__item {
+    @apply uppercase font-light w-full px-2 lg:px-4 text-2xl text-center hover:scale-110 focus:scale-110;
+  }
+
+  .nav__item__btn {
+    @apply button hover:scale-100 focus:scale-100  w-1/6 py-2 mx-2;
+  }
+
+  /* HAMBURGER NAVIGATION */
   .nav__hamburger__container {
     @apply hidden md:inline-block md:w-5/6 md:text-right;
   }
@@ -164,8 +207,18 @@ footer div i:focus {
     @apply z-50 w-1/5 mr-4 md:hidden;
   }
 
+  .nav__item--hamburger {
+    @apply uppercase no-underline font-light w-full p-5 text-2xl text-center hover:text-slate-300 focus:text-slate-300   
+    hover:scale-110 focus:scale-110;
+  }
+
+  .nav__item__btn--hamburger {
+    @apply button max-w-[160px];
+  }
+
+  /* HEADER */
   .header__container {
-    @apply flex flex-row items-center md:p-4 m-0 w-full bg-gradient-to-b from-violet to-dark-violet;
+    @apply flex flex-row items-center md:p-4 m-0 w-full bg-gradient;
   }
 
   .header__title {
@@ -176,8 +229,9 @@ footer div i:focus {
     @apply  font-light my-4 text-2xl sm:text-4xl md:w-1/5;
   }
 
+  /* FOOTER */
   .footer {
-    @apply is-responsive p-2 w-full text-center bg-gradient-to-t from-violet to-dark-violet;
+    @apply is-responsive p-2 w-full text-center bg-gradient;
   }
 
   .footer__icons__container {
@@ -188,52 +242,37 @@ footer div i:focus {
     @apply text-lg mt-2;
   }
 
-  .top__button {
-    @apply  text-lg sm:text-3xl mx-3;
+  /* SUBMISSION MESSAGE */
+  .submission__message {
+    @apply hidden bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md;
   }
 
-  .icon {
-    @apply  text-3xl mx-3;
+  .submission__message__container {
+    @apply flex;
   }
 
-  /* menu */
-
-  .nav__item {
-    @apply uppercase font-light w-full px-2 lg:px-4 text-2xl text-center hover:scale-110 focus:scale-110;
+  .submission__message__icon {
+    @apply py-1;
   }
 
-  .nav__item--hamburger {
-    @apply uppercase no-underline font-light w-full p-5 text-2xl text-center hover:text-slate-300 focus:text-slate-300   
-    hover:scale-110 focus:scale-110;
+  .submission__message__header {
+    @apply font-bold text-lg;
   }
 
-  .nav__item__btn {
-    @apply overflow-hidden hover:scale-100 focus:scale-100 bg-transparent w-1/6 py-2 mx-2 
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start
-    focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent rounded;
+  .submission__message__text {
+    @apply text-sm;
   }
 
-  .nav__item__btn--hamburger {
-    @apply overflow-hidden bg-transparent max-w-[160px] hover:text-slate-300 focus:text-slate-300
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end focus:bg-gradient-to-r focus:from-violet-start
-    focus:to-violet-end font-extralight border border-slate-300 hover:border-transparent focus:border-transparent rounded;
-  }
-
-  /* back to top button */
+  /* SCROLL TO TOP BUTTON */
   .back__to__top__button {
-    @apply p-2 text-slate-300 bg-transparent border rounded sticky bottom-5 place-self-end -mr-8 
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end hover:border-transparent;
+    @apply button p-2 sticky bottom-5 place-self-end -mr-8;
   }
 
-  /* about me section */
-  .about {
-    @apply w-full max-w-[1332px];
+  .top__button_icon {
+    @apply text-lg sm:icon;
   }
 
-  .about__title {
-    @apply font-semibold text-center text-3xl my-3;
-  }
-
+  /* ABOUT SECTION */
   .about__text {
     @apply text-center font-normal text-lg pt-8 pb-4;
   }
@@ -242,32 +281,13 @@ footer div i:focus {
     @apply my-2;
   }
 
-  .about__text__link {
-    @apply no-underline font-semibold hover:text-slate-300 focus:text-slate-300;
-  }
-
-  .about__text__link span {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-start to-violet-end;
-  }
-
-
-  /* experience section */
-  .experiences {
-    @apply w-full max-w-[1332px];
-  }
-
-  .experiences__title {
-    @apply uppercase font-semibold text-center text-3xl my-3;
-  }
-
+  /* EXPERIENCE SECTION */
   .experiences__cards {
     @apply grid grid-cols-1 sm:grid-cols-3 gap-8 py-8 justify-items-center;
   }
 
   .experiences__cards__item {
-    @apply flex flex-col justify-center sm:justify-start items-center w-full h-[190px] p-8
-    rounded bg-gradient-to-b from-violet to-dark-violet 
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
+    @apply flex flex-col justify-center sm:justify-start items-center w-full h-[190px] p-8 rounded bg-gradient hover:hover focus:focus;
   }
 
   .experiences__cards__item__title {
@@ -278,44 +298,27 @@ footer div i:focus {
     @apply font-normal text-center mt-4;
   }
 
-  /* portfolio section */
-  .portfolio {
-    @apply max-w-[1332px];
+  /* PORTFOLIO SECTION */
+
+  .portfolio--my-projects,
+  .portfolio--frontendmentor-projects {
+    @apply is-responsive;
   }
 
   .portfolio__title {
-    @apply uppercase font-semibold text-center text-3xl my-3;
-  }
-
-  .portfolio__section--my-projects,
-  .portfolio__section--frontendmentor-projects {
-    @apply flex flex-col justify-center items-center;
-  }
-
-  .portfolio__section__title {
     @apply uppercase font-medium text-center text-2xl mt-10;
   }
 
-  .portfolio__section__description {
+  .portfolio__description {
     @apply text-center my-5 px-8;
   }
 
-  .portfolio_section__description__link {
-    @apply no-underline font-semibold hover:text-slate-300 focus:text-slate-300;
-  }
-
-  .portfolio_section__description__link span {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-start to-violet-end;
-  }
-
-  .portfolio__section__cards {
+  .portfolio__cards__container {
     @apply grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-1 justify-center items-center gap-8 mb-3 w-full;
   }
 
   .portfolio__card {
-    @apply flex flex-col justify-center lg:justify-between items-center w-full h-full p-8
-    rounded bg-gradient-to-b from-violet to-dark-violet
-    hover:scale-105;
+    @apply is-responsive lg:justify-between w-full h-full p-8 rounded bg-gradient hover:scale-105;
   }
 
   .portfolio__card__title {
@@ -339,31 +342,29 @@ footer div i:focus {
   }
 
   .portfolio__card__buttons {
-    @apply flex flex-row justify-center items-center mt-4;
+    @apply flex flex-row mt-4;
   }
 
   .portfolio__card__button__github,
   .portfolio__card__button__demo {
-    @apply uppercase block py-2 px-4 border border-slate-300 hover:border-transparent rounded
-    focus:bg-gradient-to-r focus:from-violet-start focus:to-violet-end
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
+    @apply button hover:hover focus:focus uppercase py-2 px-4;
   }
 
   .portfolio__card__button__demo {
     @apply ml-4;
   }
 
-  /* contact section */
+  /* CONTACT */
   .contact {
     @apply w-full max-w-[1200px] sm:my-10;
   }
 
   .contact__title {
-    @apply uppercase font-semibold text-center text-3xl my-3 sm:my-10;
+    @apply section__title sm:my-10;
   }
 
   .contact__container {
-    @apply flex flex-col justify-center sm:grid sm:grid-cols-2 sm:justify-items-center items-center my-5 gap-6;
+    @apply is-responsive sm:grid sm:grid-cols-2 sm:justify-items-center my-5 gap-6;
   }
 
   .contact__cards {
@@ -371,15 +372,12 @@ footer div i:focus {
   }
 
   .contact__card {
-    @apply flex flex-col justify-center items-center w-[120px] md:w-[200px] h-[120px] p-4 rounded 
-    bg-gradient-to-b from-violet to-dark-violet 
-    hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
+    @apply is-responsive w-[120px] md:w-[200px] h-[120px] p-4 rounded bg-gradient hover:hover focus:focus;
   }
 
-
-  /* contact form */
+  /* CONTACT FORM */
   .contact__form {
-    @apply w-full h-full flex flex-col justify-center items-center gap-6 my-8 sm:gap-8 md:my-0;
+    @apply w-full h-full is-responsive gap-6 my-8 sm:gap-8 md:my-0;
   }
 
   .contact__form__div {
@@ -397,28 +395,7 @@ footer div i:focus {
 
   .contact__form__submit__btn {
     @apply w-5/6 md:w-1/2 lg:w-1/3 p-4 sm:ml-auto text-center text-violet border-violet border-solid border-2 rounded
-    hover:text-slate-300 hover:border-transparent hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
-  }
-
-    /* submission message */
-  .submission__message {
-    @apply hidden bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md;
-  }
-
-  .submission__message__container {
-    @apply  flex;
-  }
-
-  .submission__message__icon {
-    @apply  py-1;
-  }
-
-  .submission__message__header {
-    @apply  font-bold text-lg;
-  }
-
-  .submission__message__text {
-    @apply  text-sm;
+    hover:text-slate-300 hover:hover focus:focus;
   }
 }
 
