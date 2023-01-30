@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <script defer src="/js/index.js"></script>
+    <script defer src="/js/index.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
@@ -34,6 +34,8 @@
 <body class="is-responsive m-auto p-0 min-h-screen bg-very-dark-violet font-normal text-base text-slate-300 overflow-x-hidden">
 
         {% include 'partials/header_with_menu.njk' %}
+
+        {% include 'partials/submission_message.njk'%}
 
     <main class="is-responsive max-w-[1400px] p-8 min-h-screen bg-very-dark-violet">
 
