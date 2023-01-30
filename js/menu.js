@@ -4,5 +4,5 @@ export function toggleIcon() {
 
 export function closeHamburgerMenu() {
     toggleIcon();
-    this.document.getElementById('toggle').checked = false;
+    document.getElementById('toggle').checked = false;
 };
