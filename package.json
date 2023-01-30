@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build:css": "tailwindcss -i css/style.css -o css/output.css --watch",
-    "build": "npx @11ty/eleventy",
+    "build:css": "tailwindcss -i css/style.css -o _build/css/style.css --watch --poll",
+    "build": "tailwindcss -i css/style.css -o _build/css/style.css --minify && npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
