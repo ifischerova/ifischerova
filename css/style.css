@@ -287,7 +287,7 @@ footer div i:focus {
   }
 
   .experiences__cards__item {
-    @apply flex flex-col justify-center sm:justify-start items-center w-full h-[190px] p-8 rounded bg-gradient hover:hover focus:focus;
+    @apply is-responsive sm:justify-start w-full h-[190px] p-8 rounded bg-gradient hover:hover focus:focus;
   }
 
   .experiences__cards__item__title {
