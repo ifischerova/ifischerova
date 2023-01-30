@@ -1381,7 +1381,7 @@ html {
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: block;
-  height: 250px;
+  max-height: 250px;
 }
 
 .portfolio__card__image:hover {
