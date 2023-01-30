@@ -347,3 +347,24 @@ footer div i:focus {
     hover:text-slate-300 hover:border-transparent hover:bg-gradient-to-r hover:from-violet-start hover:to-violet-end;
   }
 }
+
+/* submission message */
+.submission__message {
+  @apply hidden bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md;
+}
+
+.submission__message__container {
+  @apply  flex;
+}
+
+.submission__message__icon {
+  @apply  py-1;
+}
+
+.submission__message__header {
+  @apply  font-bold text-lg;
+}
+
+.submission__message__text {
+  @apply  text-sm;
+}
