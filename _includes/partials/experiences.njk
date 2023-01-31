@@ -1,41 +1,23 @@
 <section id="experiences" class="section">
     <h2 class="section__title">Experiences</h2>
     <ul class="experiences__cards">
+        {% macro card(title, text_1, text_2, text_3) %}
+
         <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">HTML &amp; CSS</h3>
-            <p class="experiences__cards__item__text">Czechitas<br> Kevin Powell <br> Frontend Mentor</p>
+            <h3 class="experiences__cards__item__title">{{ title }}</h3>
+            <p class="experiences__cards__item__text">{{ text_1 }} <br> {{ text_2 }} <br> {{ text_3 }}</p>
         </li>
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">SASS</h3>
-            <p class="experiences__cards__item__text">Czechitas <br> Kevin Powell <br> Frontend Mentor </p>
-        </li>
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">Tailwind</h3>
-            <p class="experiences__cards__item__text">Frontend Mentor</p>
-        </li>
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">Bootstrap</h3>
-            <p class="experiences__cards__item__text">Czechitas</p>
-        </li>
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">Python</h3>
-            <p class="experiences__cards__item__text">Czechitas <br> Real Python <br> Codemy.com</p>    
-        </li>
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">JavaScript</h3>
-            <p class="experiences__cards__item__text">Czechitas <br> Frontend Mentor</p>
-        </li>
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">Vue</h3>
-            <p class="experiences__cards__item__text">Vue Mastery</p>
-        </li>
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">Cypress</h3>
-            <p class="experiences__cards__item__text">Filip Hric</p>
-        </li>
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">SQL</h3>
-            <p class="experiences__cards__item__text">Digital Academy (Czechitas) <br> itnetwork.cz</p>
-        </li>
+
+        {% endmacro %}
+
+        {{ card("HTML & CSS", "Czechitas", "Kevin Powell", "Frontend Mentor") }}
+        {{ card("Sass", "Czechitas", "Kevin Powell", "Frontend Mentor") }}
+        {{ card("Tailwind", "Frontend Mentor") }}
+        {{ card("Bootstrap", "Czechitas") }}
+        {{ card("Python", "Czechitas", "Real Python", "Codemy.com") }}
+        {{ card("JavaScript", "Czechitas", "Frontend Mentor") }}
+        {{ card("Vue", "Vue Mastery") }}
+        {{ card("Cypress", "Filip Hric") }}
+        {{ card("SQL", "Digital Academy (Czechitas)", "itnetwork.cz") }}
     </ul>
 </section>
