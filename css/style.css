@@ -322,7 +322,7 @@ footer div i:focus {
   }
 
   .portfolio__card {
-    @apply is-responsive lg:justify-between w-full h-full p-8 rounded bg-gradient hover:scale-105;
+    @apply flex flex-col justify-between items-center lg:justify-between w-full h-full p-8 rounded bg-gradient hover:scale-105;
   }
 
   .portfolio__card__title {
