@@ -3,10 +3,7 @@
     <ul class="experiences__cards">
         {% macro card(title, text_1, text_2, text_3) %}
 
-        <li class="experiences__cards__item">
-            <h3 class="experiences__cards__item__title">{{ title }}</h3>
-            <p class="experiences__cards__item__text">{{ text_1 }} <br> {{ text_2 }} <br> {{ text_3 }}</p>
-        </li>
+        {% include 'partials/experience_card.njk' %}
 
         {% endmacro %}
 
