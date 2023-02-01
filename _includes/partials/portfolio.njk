@@ -1,3 +1,5 @@
+{% from 'partials/portfolio_card.njk' import portfolio_card %}
+
 <section id="portfolio" class="section">
     <h2 class="section__title">Portfolio</h2>
 
@@ -7,15 +9,18 @@
             <p class="portfolio__description">Projects that are mainly a result of my frustration of smth :D </p>
 
             <ul class="portfolio__cards__container">
-                {% macro portfolio_card(title, webp, jpg, description, tech_item_1, gh_href, demo_href) %}
-
-                {% include 'partials/portfolio_card.njk' %}
-
-                {% endmacro %}
-
-                {{ portfolio_card("News from kindergarten app - frontend", "/images/ms-vinicna-info-dark-theme.webp", "/images/ms-vinicna-info-dark-theme.jpg", "(Un)subscribe to all news published on the kindergarten's web.","https://github.com/ifischerova/ms-vinicna-info", "https://novinky-ze-skolky.fly.dev/" ) }}
-                {{ portfolio_card("News from kindergarten app - backend", "/images/ms-vinicna-info-light-theme.webp", "/images/ms-vinicna-info-light-theme.png", "Regularly checks the kindergarten's web. News are sent via email.","https://github.com/ifischerova/-skolka-_news", "https://novinky-ze-skolky.fly.dev/" ) }}
-
+                {{ portfolio_card("News from kindergarten app - frontend", 
+                                  "ms-vinicna-info-dark-theme",
+                                  "(Un)subscribe to all news published on the kindergarten's web.",
+                                  "https://github.com/ifischerova/ms-vinicna-info", 
+                                  "https://novinky-ze-skolky.fly.dev/",
+                                  ["html", "tailwind", "python", "js", "gha", "cypress"]) }}
+                {{ portfolio_card("News from kindergarten app - backend",
+                                  "ms-vinicna-info-light-theme",
+                                  "Regularly checks the kindergarten's web. News are sent via email.",
+                                  "https://github.com/ifischerova/-skolka-_news",
+                                  "https://novinky-ze-skolky.fly.dev/",
+                                  ["python", "gha"]) }}
             </ul>
     </section>
 
@@ -27,21 +32,60 @@
             </p>
             
             <ul class="portfolio__cards__container">
-                {% macro portfolio_card(title, webp, jpg, description, gh_href, demo_href) %}
-
-                {% include 'partials/portfolio_card.njk' %}
-
-                {% endmacro %}
-
-                {{ portfolio_card("FAQ accordion card", "/images/faq-accordion-card.webp", "/images/faq-accordion-card.jpg", "", "https://github.com/ifischerova/frontendmentor-faq-accordion-card", "https://ifischerova.github.io/frontendmentor-faq-accordion-card/") }}
-                {{ portfolio_card("Interactive rating component", "/images/interactive-rating-component.webp", "/images/interactive-rating-component.jpg", "", "https://github.com/ifischerova/frontendmentor-interactive-rating-component", "https://ifischerova.github.io/frontendmentor-interactive-rating-component/#") }}
-                {{ portfolio_card("Huddle landing page", "/images/huddle-landing-page.webp", "/images/huddle-landing-page.jpg", "", "https://github.com/ifischerova/frontendmentor-huddle-landing-page-with-single-introductory-section", "https://frontendmentor-huddle-landing-page-with-single-introductor.pages.dev/") }}
-                {{ portfolio_card("Single price grid component", "/images/single-price-grid-component.webp", "/images/single-price-grid-component.jpg", "", "https://github.com/ifischerova/frontendmentor-single-price-grid-component", "https://ifischerova.github.io/frontendmentor-single-price-grid-component/") }}
-                {{ portfolio_card("3-column preview card component", "/images/three-column-preview-card-component.webp", "/images/three-column-preview-card-component.jpg", "", "https://github.com/ifischerova/frontendmentor-3-column-preview-card-component", "https://ifischerova.github.io/frontendmentor-3-column-preview-card-component/") }}
-                {{ portfolio_card("Stats preview card component", "/images/stats-preview-card-component.webp", "/images/stats-preview-card-component.png","", "https://github.com/ifischerova/frontendmentor-stats-preview-card-component", "https://ifischerova.github.io/frontendmentor-stats-preview-card-component/") }}
-                {{ portfolio_card("Order summary component", "/images/order-summary-component.webp", "/images/order-summary-component.jpg","", "https://github.com/ifischerova/frontendmentor-order-summary-component", "https://ifischerova.github.io/frontendmentor-order-summary-component/#") }}
-                {{ portfolio_card("Profile card component", "/images/profile-card-component.webp", "/images/profile-card-component.jpg","", "https://github.com/ifischerova/frontendmentor-profile-card-component", "https://ifischerova.github.io/frontendmentor-profile-card-component/") }}
-                {{ portfolio_card("NFT preview card component", "/images/nft-preview-card-component.webp", "/images/nft-preview-card-component.jpg","", "https://github.com/ifischerova/frontendmentor-NFT-preview-card-component", "https://ifischerova.github.io/frontendmentor-NFT-preview-card-component/") }}
+                {{ portfolio_card("FAQ accordion card", 
+                                  "faq-accordion-card",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-faq-accordion-card",
+                                  "https://ifischerova.github.io/frontendmentor-faq-accordion-card/",
+                                  ["html", "sass", "js"]) }}
+                {{ portfolio_card("Interactive rating component",
+                                  "interactive-rating-component",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-interactive-rating-component",
+                                  "https://ifischerova.github.io/frontendmentor-interactive-rating-component/#",
+                                  ["html", "sass", "js"]) }}
+                {{ portfolio_card("Huddle landing page",
+                                  "huddle-landing-page",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-huddle-landing-page-with-single-introductory-section",
+                                  "https://frontendmentor-huddle-landing-page-with-single-introductor.pages.dev/",
+                                  ["html", "sass"]) }}
+                {{ portfolio_card("Single price grid component",
+                                  "single-price-grid-component",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-single-price-grid-component",
+                                  "https://ifischerova.github.io/frontendmentor-single-price-grid-component/",
+                                  ["html", "sass"]) }}
+                {{ portfolio_card("3-column preview card component",
+                                  "three-column-preview-card-component",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-3-column-preview-card-component",
+                                  "https://ifischerova.github.io/frontendmentor-3-column-preview-card-component/",
+                                  ["html", "css"]) }}
+                {{ portfolio_card("Stats preview card component",
+                                  "stats-preview-card-component",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-stats-preview-card-component",
+                                  "https://ifischerova.github.io/frontendmentor-stats-preview-card-component/",
+                                  ["html", "css"]) }}
+                {{ portfolio_card("Order summary component",
+                                  "order-summary-component",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-order-summary-component",
+                                  "https://ifischerova.github.io/frontendmentor-order-summary-component/#",
+                                  ["html", "css"]) }}
+                {{ portfolio_card("Profile card component",
+                                  "profile-card-component",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-profile-card-component",
+                                  "https://ifischerova.github.io/frontendmentor-profile-card-component/",
+                                  ["html", "css"]) }}
+                {{ portfolio_card("NFT preview card component",
+                                  "nft-preview-card-component",
+                                  "",
+                                  "https://github.com/ifischerova/frontendmentor-NFT-preview-card-component",
+                                  "https://ifischerova.github.io/frontendmentor-NFT-preview-card-component/",
+                                  ["html", "css"]) }}
             </ul>
     </section>
 </section>

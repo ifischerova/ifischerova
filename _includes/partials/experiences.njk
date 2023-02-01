@@ -1,12 +1,7 @@
 <section id="experiences" class="section">
     <h2 class="section__title">Experiences</h2>
     <ul class="experiences__cards">
-        {% macro card(title, text_1, text_2, text_3) %}
-
-        {% include 'partials/experience_card.njk' %}
-
-        {% endmacro %}
-
+        {%- from 'partials/experience_card.njk' import card %}
         {{ card("HTML & CSS", "Czechitas", "Kevin Powell", "Frontend Mentor") }}
         {{ card("Sass", "Czechitas", "Kevin Powell", "Frontend Mentor") }}
         {{ card("Tailwind", "Frontend Mentor") }}
