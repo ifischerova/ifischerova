@@ -9,7 +9,7 @@
     "tailwindcss": "^3.2.1"
   },
   "name": "ifischerova",
-  "description": "Personal website of enthusiastic IT mummy & runner (page in development at this moment). \r Currently working in QA. \r Hard working to become a frontend developer.",
+  "description": "Personal website of enthusiastic junior frontend developer with QA background &amp; skills.",
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "repository": {
