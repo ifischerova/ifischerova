@@ -1,2 +1,2 @@
 ## ifischerova.cz 
-Intro page of enthusiastic junior frontend developer with QA background & skills.
+Intro page of enthusiastic software QA engineer with some frontend skills.
