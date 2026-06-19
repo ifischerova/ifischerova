@@ -1,27 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["_includes/**/*.njk", "_site/**/*.{html,js}"],
+  content: ["_includes/**/*.njk", "index.html", "_site/**/*.{html,js}"],
   theme: {
-    screens: {
-      sm: "600px",
-
-      md: "950px",
-
-      lg: "1200px",
-
-      xl: "1440px",
-    },
+    screens: { sm: "600px", md: "950px", lg: "1200px", xl: "1440px" },
     extend: {
       colors: {
-        "violet-start": "#A4508B",
-        "violet-end": "#5F0A87",
-        "violet": "#5A189A",
-        "dark-violet": "#240046",
-        "very-dark-violet": "#10002B",
+        ink: "#0f172a",
+        surface: "#1e293b",
+        line: "#334155",
+        fog: "#94a3b8",
+        cloud: "#e2e8f0",
+        teal: "#2dd4bf",
+        "teal-deep": "#14b8a6",
       },
-    },
-    fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+      },
     },
   },
   plugins: [],

@@ -1,9 +1,9 @@
 import { closeHamburgerMenu, toggleIcon } from './menu.js'
-import { initScroll, scrollToTop }  from './scroll-button.js'
-import { initSubmit } from './form.js'
+import { initScroll, scrollToTop } from './scroll-button.js'
+import { initI18n } from './i18n.js'
 
 initScroll()
-initSubmit()
+initI18n()
 
 window.closeHamburgerMenu = closeHamburgerMenu
 window.toggleIcon = toggleIcon

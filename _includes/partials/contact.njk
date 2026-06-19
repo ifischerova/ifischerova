@@ -1,38 +1,18 @@
-<section id="contact" class="contact">
-    <h2 class="contact__title">Contact Me</h2>
+<section id="contact" class="section container-page">
+    <h2 class="section-title"><span class="i18n-en">Contact Me</span><span class="i18n-cs">Napište mi</span></h2>
 
-    <div class="contact__container">
-        <ul class="contact__cards">
-            <li class="contact__card">
-                <a href="mailto:me@ifischerova.cz" aria-label="Send me an email."><i class="fa-solid fa-envelope icon"></i></a>
-                <h3>Email</h3>
-            </li>
-            <li class="contact__card">
-                <a href="https://api.whatsapp.com/send?phone=731479606" aria-label="Contact me on WhatsApp."><i class="fa-brands fa-square-whatsapp icon"></i></a>
-                <h3>731479606</h3>
-            </li>
-            <li class="contact__card">
-                <a href="https://www.linkedin.com/in/iva-fischerova/" aria-label="See my LinkedIn profile."><i class="fa-brands fa-linkedin icon"></i></a>
-                <h3>LinkedIn</h3>
-            </li>
-        </ul>
-
-        <form id="contact-form" class="contact__form" action="/?form_submit=success" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <div class="hidden">
-                <label>
-                Don’t fill this out if you’re human: <input name="bot-field" />
-                </label>
-            </div>
-            <div class="contact__form__div">
-                <label class="contact__form__label" for="name-and-surname">Name &amp; Surname</label><input class="contact__form__input" type="text" id="name-and-surname" name="name-and-surname" required>
-            </div>
-            <div class="contact__form__div">
-                <label class="contact__form__label" for="email">Email</label><input class="contact__form__input" type="email" id="email" name="email" required>
-            </div>            
-            <div class="contact__form__div">
-                <label class="contact__form__label" for="message">Message</label><textarea class="contact__form__input"  id="message" rows="4" name="message"required></textarea>
-            </div>
-            <input type="submit" value="Send Message" class="contact__form__submit__btn" id="submit-form-button">
-        </form>
-   </div>
+    <ul class="contact__cards grid gap-4 sm:grid-cols-3 max-w-3xl">
+        <li class="contact__card card flex items-center gap-4">
+            <a href="mailto:me@ifischerova.cz" aria-label="Send me an email."><i class="fa-solid fa-envelope text-teal text-2xl"></i></a>
+            <h3 class="text-cloud">Email</h3>
+        </li>
+        <li class="contact__card card flex items-center gap-4">
+            <a href="https://api.whatsapp.com/send?phone=731479606" aria-label="Contact me on WhatsApp."><i class="fa-brands fa-square-whatsapp text-teal text-2xl"></i></a>
+            <h3 class="text-cloud">WhatsApp</h3>
+        </li>
+        <li class="contact__card card flex items-center gap-4">
+            <a href="https://www.linkedin.com/in/iva-fischerova/" aria-label="See my LinkedIn profile."><i class="fa-brands fa-linkedin text-teal text-2xl"></i></a>
+            <h3 class="text-cloud">LinkedIn</h3>
+        </li>
+    </ul>
 </section>

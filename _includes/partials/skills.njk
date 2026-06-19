@@ -1,0 +1,28 @@
+{% set qa = ["Cypress", "Playwright", "Selenium", "Gherkin / Behave", "Postman", "SoapUI", "E2E & integration automation", "ISTQB practices"] %}
+{% set prog = ["Python (Flask, Celery)", "Java", "TypeScript", "JavaScript", "SQL"] %}
+{% set tools = ["Vue", "React", "Tailwind", "Bootstrap", "SASS", "HTML / CSS", "Git / GitHub Actions", "Claude Code"] %}
+
+<section id="skills" class="section container-page">
+  <h2 class="section-title"><span class="i18n-en">Skills</span><span class="i18n-cs">Dovednosti</span></h2>
+
+  <div class="grid gap-6 md:grid-cols-3">
+    <div class="card">
+      <h3 class="text-teal font-semibold mb-4"><span class="i18n-en">Testing &amp; QA</span><span class="i18n-cs">Testování &amp; QA</span></h3>
+      <div class="flex flex-wrap gap-2">
+        {% for s in qa %}<span class="tag">{{ s }}</span>{% endfor %}
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="text-teal font-semibold mb-4"><span class="i18n-en">Programming</span><span class="i18n-cs">Programování</span></h3>
+      <div class="flex flex-wrap gap-2">
+        {% for s in prog %}<span class="tag">{{ s }}</span>{% endfor %}
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="text-teal font-semibold mb-4"><span class="i18n-en">Frameworks &amp; Tools</span><span class="i18n-cs">Frameworky &amp; nástroje</span></h3>
+      <div class="flex flex-wrap gap-2">
+        {% for s in tools %}<span class="tag">{{ s }}</span>{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

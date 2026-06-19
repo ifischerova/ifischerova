@@ -1,26 +1,28 @@
 {
   "scripts": {
     "build:css": "tailwindcss -i css/style.css -o _build/css/style.css --watch --poll",
-    "build": "tailwindcss -i css/style.css -o _build/css/style.css --minify && npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve"
+    "build:css:once": "tailwindcss -i css/style.css -o _build/css/style.css --minify",
+    "build": "npm run build:css:once && npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "serve:test": "npm run build:css:once && npx @11ty/eleventy --serve --port 8080",
+    "test": "playwright test",
+    "test:local": "playwright test",
+    "test:live": "cross-env BASE_URL=https://ifischerova.cz playwright test"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "@playwright/test": "^1.45.0",
+    "cross-env": "^7.0.3",
     "tailwindcss": "^3.2.1"
   },
   "name": "ifischerova",
-  "description": "Personal website of enthusiastic junior frontend developer with QA background &amp; skills.",
-  "version": "1.0.0",
+  "description": "Personal website of Iva Fischerová — Software QA / Test Engineer.",
+  "version": "2.0.0",
   "main": "tailwind.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ifischerova/ifischerova.git"
-  },
-  "keywords": [],
-  "author": "",
+  "repository": { "type": "git", "url": "git+https://github.com/ifischerova/ifischerova.git" },
+  "keywords": ["QA", "testing", "test automation", "portfolio"],
+  "author": "Iva Fischerová",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ifischerova/ifischerova/issues"
-  },
+  "bugs": { "url": "https://github.com/ifischerova/ifischerova/issues" },
   "homepage": "https://github.com/ifischerova/ifischerova#readme"
 }

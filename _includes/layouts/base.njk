@@ -3,54 +3,58 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Set language before paint to avoid a flash of the wrong language. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('lang');
+          var nav = (navigator.language || 'en').toLowerCase();
+          var lang = saved || (nav.indexOf('cs') === 0 || nav.indexOf('sk') === 0 ? 'cs' : 'en');
+          document.documentElement.classList.add('lang-' + lang);
+          document.documentElement.setAttribute('lang', lang);
+        } catch (e) {
+          document.documentElement.classList.add('lang-en');
+        }
+      })();
+    </script>
+
     <script defer src="/js/index.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&amp;display=swap" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet" media="screen">   
+    <link href="/css/style.css" rel="stylesheet" media="screen">
     <script src="https://kit.fontawesome.com/42ccad3a95.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Meet Iva Fischerova, enthusiastic junior frontend developer with QA background &amp; skills.">
 
-    <meta property="og:title" content="Iva Fischerova">
-	<meta property="og:description" content="Intro page of enthusiastic junior frontend developer with QA background &amp; skills.">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="">
-	<meta property="og:url" content="https://ifischerova.cz/">
-	<meta property="og:locale" content="en_US">
+    <meta name="description" content="Iva Fischerová — Software QA / Test Engineer specializing in E2E testing and test automation.">
+    <meta name="author" content="Iva Fischerová">
 
-    <meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="">
-	<meta name="twitter:creator" content="@ifischerova_cz">
-	<meta name="twitter:title" content="Iva Fischerova">
-	<meta name="twitter:description" content="Intro page of enthusiastic junior frontend developer with QA background &amp; skills.">
-
-    <meta name="author" content="Iva Fischerova">
+    <meta property="og:title" content="Iva Fischerová — Software QA / Test Engineer">
+    <meta property="og:description" content="Software QA / Test Engineer specializing in E2E testing and test automation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ifischerova.cz/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="cs_CZ">
 
     <title>{{ title }}</title>
-
 </head>
 
 <body class="body">
-
-        {% include 'partials/header_with_menu.njk' %}
-
-        {% include 'partials/submission_message.njk'%}
+    {% include 'partials/header_with_menu.njk' %}
 
     <main class="main">
-
+        {% include 'partials/hero.njk' %}
         {% include 'partials/about.njk' %}
-
-        {% include 'partials/experiences.njk' %}
-
+        {% include 'partials/work_experience.njk' %}
+        {% include 'partials/skills.njk' %}
+        {% include 'partials/certifications.njk' %}
         {% include 'partials/portfolio.njk' %}
-
         {% include 'partials/contact.njk' %}
-        
         {% include 'partials/back_to_top_button.njk' %}
     </main>
 
-        {% include 'partials/footer.njk' %}
+    {% include 'partials/footer.njk' %}
 </body>
 
 </html>

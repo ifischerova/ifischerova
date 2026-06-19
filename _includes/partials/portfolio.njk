@@ -1,102 +1,13 @@
-{% from 'partials/portfolio_card.njk' import portfolio_card %}
+<section id="portfolio" class="section container-page">
+    <h2 class="section-title"><span class="i18n-en">Portfolio</span><span class="i18n-cs">Portfolio</span></h2>
 
-<section id="portfolio" class="section">
-    <h2 class="section__title">Portfolio</h2>
+    <p class="text-cloud max-w-2xl mb-6">
+        <span class="i18n-en">My side projects, Frontend Mentor challenges, and testing experiments all live on GitHub.</span>
+        <span class="i18n-cs">Moje vedlejší projekty, výzvy z Frontend Mentoru a testovací experimenty najdete na GitHubu.</span>
+    </p>
 
-
-    <section class="portfolio--my-projects">
-        <h3 class="portfolio__title">My projects</h3>
-            <p class="portfolio__description">Projects that are mainly a result of my frustration of smth :D </p>
-
-            <ul class="portfolio__cards__container">
-                {{ portfolio_card("News from kindergarten app - frontend", 
-                                  "ms-vinicna-info-dark-theme",
-                                  "(Un)subscribe to all news published on the kindergarten's web.",
-                                  "https://github.com/ifischerova/ms-vinicna-info", 
-                                  "https://novinky-ze-skolky.fly.dev/",
-                                  ["html", "tailwind", "python", "js", "gha", "cypress"]) }}
-                {{ portfolio_card("News from kindergarten app - backend",
-                                  "ms-vinicna-info-light-theme",
-                                  "Regularly checks the kindergarten's web. News are sent via email.",
-                                  "https://github.com/ifischerova/-skolka-_news",
-                                  "https://novinky-ze-skolky.fly.dev/",
-                                  ["python", "gha"]) }}
-                {{ portfolio_card("Smart home widget", 
-                    "smart-home-widget",
-                    "",
-                    "https://github.com/ifischerova/react_smart_home_widget_project",
-                    "https://smart-house-widget.netlify.app/",
-                    ["react","html", "css"]) }}
-                {{ portfolio_card("Color mixer", 
-                    "color-mixer",
-                    "Play with the color sliders and see the resulting color.",
-                    "https://github.com/ifischerova/react_mixer_barev",
-                    "https://color-mixer-project.netlify.app/",
-                    ["react","html", "css"]) }}
-            </ul>
-    </section>
-
-    <section class="portfolio--frontendmentor-projects">
-        <h3 class="portfolio__title">Frontend Mentor challenges</h3>
-            <p class="portfolio__description">My solutions of some
-                <a class="text__link" href="https://www.frontendmentor.io/" aria-label="Visit the Frontend Mentor pages."><span> Frontend Mentor</span>
-                </a> challenges.
-            </p>
-            <ul class="portfolio__cards__container">
-                {{ portfolio_card("FAQ accordion card", 
-                                  "faq-accordion-card",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-faq-accordion-card",
-                                  "https://ifischerova.github.io/frontendmentor-faq-accordion-card/",
-                                  ["html", "sass", "js"]) }}
-                {{ portfolio_card("Interactive rating component",
-                                  "interactive-rating-component",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-interactive-rating-component",
-                                  "https://ifischerova.github.io/frontendmentor-interactive-rating-component/#",
-                                  ["html", "sass", "js"]) }}
-                {{ portfolio_card("Huddle landing page",
-                                  "huddle-landing-page",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-huddle-landing-page-with-single-introductory-section",
-                                  "https://frontendmentor-huddle-landing-page-with-single-introductor.pages.dev/",
-                                  ["html", "sass"]) }}
-                {{ portfolio_card("Single price grid component",
-                                  "single-price-grid-component",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-single-price-grid-component",
-                                  "https://ifischerova.github.io/frontendmentor-single-price-grid-component/",
-                                  ["html", "sass"]) }}
-                {{ portfolio_card("3-column preview card component",
-                                  "three-column-preview-card-component",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-3-column-preview-card-component",
-                                  "https://ifischerova.github.io/frontendmentor-3-column-preview-card-component/",
-                                  ["html", "css"]) }}
-                {{ portfolio_card("Stats preview card component",
-                                  "stats-preview-card-component",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-stats-preview-card-component",
-                                  "https://ifischerova.github.io/frontendmentor-stats-preview-card-component/",
-                                  ["html", "css"]) }}
-                {{ portfolio_card("Order summary component",
-                                  "order-summary-component",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-order-summary-component",
-                                  "https://ifischerova.github.io/frontendmentor-order-summary-component/#",
-                                  ["html", "css"]) }}
-                {{ portfolio_card("Profile card component",
-                                  "profile-card-component",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-profile-card-component",
-                                  "https://ifischerova.github.io/frontendmentor-profile-card-component/",
-                                  ["html", "css"]) }}
-                {{ portfolio_card("NFT preview card component",
-                                  "nft-preview-card-component",
-                                  "",
-                                  "https://github.com/ifischerova/frontendmentor-NFT-preview-card-component",
-                                  "https://ifischerova.github.io/frontendmentor-NFT-preview-card-component/",
-                                  ["html", "css"]) }}
-            </ul>
-    </section>
+    <a class="btn-primary" href="https://github.com/ifischerova" aria-label="See Iva's projects on GitHub.">
+        <i class="fa-brands fa-github"></i>
+        <span class="i18n-en">View my GitHub</span><span class="i18n-cs">Můj GitHub</span>
+    </a>
 </section>
