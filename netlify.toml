@@ -7,4 +7,6 @@
   publish = "_site"
 
 [build.environment]
-  NODE_VERSION = "20"
+  # Node 18: required to stay below 20 for @netlify/plugin-lighthouse,
+  # and comfortably sufficient for Eleventy 1.x + Tailwind 3.x.
+  NODE_VERSION = "18"
