@@ -7,9 +7,11 @@ function currentLang() {
 }
 
 function applyResumeLinks(lang) {
+  // Note: the Czech file uses the "cz" abbreviation, not the "cs" language code.
+  const file = lang === 'cs' ? 'Iva_Fischerova_cz_resume.pdf' : 'Iva_Fischerova_en_resume.pdf';
   document.querySelectorAll('[data-resume-link]').forEach((a) => {
-    a.setAttribute('href', `/src/resume-${lang}.pdf`);
-    a.setAttribute('download', `Iva_Fischerova_${lang}_resume.pdf`);
+    a.setAttribute('href', `/src/${file}`);
+    a.setAttribute('download', file);
   });
 }
 

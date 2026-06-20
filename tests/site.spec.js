@@ -28,14 +28,14 @@ test('nav links point to the section anchors', async ({ page }) => {
 
 test('default language is English, resume points to EN CV', async ({ page }) => {
   await expect(page.locator('html')).toHaveClass(/lang-en/);
-  await expect(page.locator('[data-resume-link]').first()).toHaveAttribute('href', /resume-en\.pdf$/);
+  await expect(page.locator('[data-resume-link]').first()).toHaveAttribute('href', /Iva_Fischerova_en_resume\.pdf$/);
 });
 
 test('language toggle switches to Czech and persists', async ({ page }) => {
   await page.locator('[data-set-lang="cs"]').first().click();
   await expect(page.locator('html')).toHaveClass(/lang-cs/);
   await expect(page.getByText('Najdu chyby dřív než vaši uživatelé.')).toBeVisible();
-  await expect(page.locator('[data-resume-link]').first()).toHaveAttribute('href', /resume-cs\.pdf$/);
+  await expect(page.locator('[data-resume-link]').first()).toHaveAttribute('href', /Iva_Fischerova_cz_resume\.pdf$/);
 
   await page.reload();
   await expect(page.locator('html')).toHaveClass(/lang-cs/);
