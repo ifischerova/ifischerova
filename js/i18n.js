@@ -20,6 +20,18 @@ function updateToggleState(lang) {
   });
 }
 
+// Keep the hamburger button's label correct for its open/closed state and language.
+export function updateMenuLabel() {
+  const hamburger = document.getElementById('hamburger');
+  if (!hamburger) return;
+  const open = hamburger.classList.contains('is-active');
+  const cs = document.documentElement.classList.contains('lang-cs');
+  const label = open
+    ? (cs ? 'Zavřít menu' : 'Close menu')
+    : (cs ? 'Otevřít menu' : 'Open menu');
+  hamburger.setAttribute('aria-label', label);
+}
+
 export function setLang(lang) {
   const root = document.documentElement;
   root.classList.remove('lang-en', 'lang-cs');
@@ -28,12 +40,14 @@ export function setLang(lang) {
   try { localStorage.setItem('lang', lang); } catch (e) { /* ignore */ }
   applyResumeLinks(lang);
   updateToggleState(lang);
+  updateMenuLabel();
 }
 
 export function initI18n() {
   const lang = currentLang();
   applyResumeLinks(lang);
   updateToggleState(lang);
+  updateMenuLabel();
   document.querySelectorAll('[data-set-lang]').forEach((btn) => {
     btn.addEventListener('click', () => setLang(btn.getAttribute('data-set-lang')));
   });

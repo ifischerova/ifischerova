@@ -4,8 +4,10 @@ on:
   push:
     branches: ["**"]
   pull_request:
-  schedule:
-    - cron: "0 6 * * *"   # daily 06:00 UTC — test the live site
+  # The daily live-site cron is intentionally disabled until the redesign is
+  # deployed; re-enable by uncommenting the schedule block below.
+  # schedule:
+  #   - cron: "0 6 * * *"   # daily 06:00 UTC — test the live site
   workflow_dispatch:
 
 jobs:

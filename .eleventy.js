@@ -1,6 +1,4 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("images");
-
   eleventyConfig.addPassthroughCopy({"_build/css/*.css": "css"});
 
   eleventyConfig.addPassthroughCopy("js");

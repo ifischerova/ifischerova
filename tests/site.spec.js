@@ -68,3 +68,36 @@ test('GitHub and LinkedIn links are present', async ({ page }) => {
   await expect(page.locator('a[href*="github.com/ifischerova"]').first()).toBeAttached();
   await expect(page.locator('a[href*="linkedin.com/in/iva-fischerova"]').first()).toBeAttached();
 });
+
+test('mobile hamburger menu opens and closes', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+
+  const hamburger = page.locator('#hamburger');
+  const panelLink = page.locator('#hamburger-menu a[href="#about"]');
+
+  await expect(hamburger).toBeVisible();          // hamburger shown on mobile
+  await expect(page.locator('#sidebar-menu')).toBeHidden();  // desktop nav hidden
+  await expect(panelLink).toBeHidden();           // overlay collapsed by default
+
+  await hamburger.click();
+  await expect(page.locator('#toggle')).toBeChecked();
+  await expect(panelLink).toBeVisible();          // overlay revealed
+
+  await panelLink.click();                        // selecting a link closes it
+  await expect(page.locator('#toggle')).not.toBeChecked();
+});
+
+test('basic accessibility: lang attr, single h1, every link has a name', async ({ page }) => {
+  await expect(page.locator('html')).toHaveAttribute('lang', /^(en|cs)$/);
+  await expect(page.locator('h1')).toHaveCount(1);
+
+  const links = page.locator('a');
+  const count = await links.count();
+  for (let i = 0; i < count; i++) {
+    const link = links.nth(i);
+    const text = ((await link.textContent()) || '').trim();
+    const aria = await link.getAttribute('aria-label');
+    expect(Boolean(text) || Boolean(aria)).toBeTruthy();
+  }
+});

@@ -8,15 +8,20 @@
     <!-- Set language before paint to avoid a flash of the wrong language. -->
     <script>
       (function () {
+        var lang = 'en';
         try {
           var saved = localStorage.getItem('lang');
           var nav = (navigator.language || 'en').toLowerCase();
-          var lang = saved || (nav.indexOf('cs') === 0 || nav.indexOf('sk') === 0 ? 'cs' : 'en');
-          document.documentElement.classList.add('lang-' + lang);
-          document.documentElement.setAttribute('lang', lang);
-        } catch (e) {
-          document.documentElement.classList.add('lang-en');
-        }
+          lang = saved || (nav.indexOf('cs') === 0 || nav.indexOf('sk') === 0 ? 'cs' : 'en');
+        } catch (e) { lang = 'en'; }
+        document.documentElement.classList.add('lang-' + lang);
+        document.documentElement.setAttribute('lang', lang);
+        // Keep the language-toggle button state correct even if the JS module fails to load.
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === lang));
+          });
+        });
       })();
     </script>
 

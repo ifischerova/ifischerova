@@ -35,7 +35,10 @@ a { @apply transition-colors; }
   .nav-link { @apply text-sm text-fog hover:text-teal; }
   .lang-switch { @apply inline-flex overflow-hidden rounded-md border border-line text-xs font-semibold; }
   .lang-switch__btn { @apply px-2.5 py-1 text-fog; }
-  .lang-switch__btn[aria-pressed="true"] { @apply bg-teal text-ink; }
+  /* Active state is driven by the <html> lang class set before paint,
+     so the correct button is highlighted even before JS runs. */
+  .lang-en .lang-switch__btn[data-set-lang="en"],
+  .lang-cs .lang-switch__btn[data-set-lang="cs"] { @apply bg-teal text-ink; }
   .link-accent { @apply text-teal hover:text-teal-deep underline-offset-2 hover:underline; }
 }
 
@@ -76,5 +79,4 @@ a { @apply transition-colors; }
     text-align: center;
     font-size: 1.25rem;
   }
-  .nav__container br { display: none; }
 }
