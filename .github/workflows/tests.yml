@@ -43,10 +43,36 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - run: npx playwright test
+      - id: tests
+        run: npx playwright test
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
           name: playwright-report-live
           path: playwright-report/
           retention-days: 14
+      # Emails the result of every live run (pass or fail) so you don't have to
+      # check GitHub. Requires repo secrets MAIL_USERNAME / MAIL_PASSWORD / MAIL_TO
+      # (see README). continue-on-error so a missing/incorrect mail config never
+      # turns the test result red.
+      - name: Email the live-test result
+        if: ${{ always() }}
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: ifischerova.cz CI <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.MAIL_TO }}
+          subject: "[ifischerova.cz] Live tests: ${{ steps.tests.outcome }}"
+          body: |
+            Daily live-site Playwright tests for https://ifischerova.cz have finished.
+
+            Result: ${{ steps.tests.outcome }}
+            Triggered by: ${{ github.event_name }}
+            Run + HTML report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            The full HTML report is attached to the run as the "playwright-report-live" artifact.
