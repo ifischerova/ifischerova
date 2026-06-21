@@ -17,6 +17,16 @@ module.exports = {
         sans: ['Poppins', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
+      keyframes: {
+        // Teal halo that breathes — used on the Digital Academy career-switch dot.
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 3px 1px rgba(45, 212, 191, 0.35)" },
+          "50%": { boxShadow: "0 0 11px 4px rgba(45, 212, 191, 0.85)" },
+        },
+      },
+      animation: {
+        glow: "glow 2.4s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
