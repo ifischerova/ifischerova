@@ -65,9 +65,11 @@ Download it, unzip, and open `index.html`.
 - **`Lighthouse`** workflow — on demand and weekly; audits the built site and posts a public
   report link in the run log.
 
-> **Email notifications** require three repository secrets
-> (*Settings -> Secrets and variables -> Actions*): `MAIL_USERNAME`, `MAIL_PASSWORD`
-> (an SMTP / Gmail app password), and `MAIL_TO`. The workflow uses Gmail SMTP by default.
+> **Email notifications** use the [Resend](https://resend.com) API (no SMTP / app password).
+> Add two repository secrets (*Settings -> Secrets and variables -> Actions*):
+> `RESEND_API_KEY` and `MAIL_TO`. On Resend's free tier the test sender
+> (`onboarding@resend.dev`) can only deliver to the email you signed up with; to send
+> elsewhere, verify a domain in Resend and update the `from` address in the workflow.
 
 ## Structure
 

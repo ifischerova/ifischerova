@@ -52,27 +52,26 @@ jobs:
           path: playwright-report/
           retention-days: 14
       # Emails the result of every live run (pass or fail) so you don't have to
-      # check GitHub. Requires repo secrets MAIL_USERNAME / MAIL_PASSWORD / MAIL_TO
-      # (see README). continue-on-error so a missing/incorrect mail config never
-      # turns the test result red.
+      # check GitHub. Uses the Resend API (no SMTP / Gmail app password needed).
+      # Requires repo secrets RESEND_API_KEY and MAIL_TO (see README).
+      # continue-on-error so a missing/incorrect mail config never turns the
+      # test result red.
       - name: Email the live-test result
         if: ${{ always() }}
         continue-on-error: true
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          from: ifischerova.cz CI <${{ secrets.MAIL_USERNAME }}>
-          to: ${{ secrets.MAIL_TO }}
-          subject: "[ifischerova.cz] Live tests: ${{ steps.tests.outcome }}"
-          body: |
-            Daily live-site Playwright tests for https://ifischerova.cz have finished.
-
-            Result: ${{ steps.tests.outcome }}
-            Triggered by: ${{ github.event_name }}
-            Run + HTML report: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-
-            The full HTML report is attached to the run as the "playwright-report-live" artifact.
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          OUTCOME: ${{ steps.tests.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          body=$(printf 'Daily live-site Playwright tests for https://ifischerova.cz have finished.\n\nResult: %s\nRun + HTML report: %s\n\nThe full HTML report is attached to the run as the "playwright-report-live" artifact.\n' "$OUTCOME" "$RUN_URL")
+          jq -n \
+            --arg to "$MAIL_TO" \
+            --arg subject "[ifischerova.cz] Live tests: $OUTCOME" \
+            --arg text "$body" \
+            '{from: "ifischerova.cz CI <onboarding@resend.dev>", to: [$to], subject: $subject, text: $text}' \
+          | curl -fsS -X POST https://api.resend.com/emails \
+              -H "Authorization: Bearer $RESEND_API_KEY" \
+              -H "Content-Type: application/json" \
+              --data @-
