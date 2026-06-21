@@ -69,6 +69,9 @@ a { @apply transition-colors; }
     transition: transform 0.3s ease-in-out;
   }
   #toggle:checked + .nav { transform: scale(1); }
+  /* Lift the header above the open overlay so the hamburger's X animation
+     stays visible and clickable — it doubles as the close button. */
+  #toggle:checked ~ .header__container { z-index: 60; }
   .nav__container {
     display: flex;
     flex-direction: column;

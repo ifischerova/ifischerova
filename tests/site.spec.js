@@ -88,6 +88,25 @@ test('mobile hamburger menu opens and closes', async ({ page }) => {
   await expect(page.locator('#toggle')).not.toBeChecked();
 });
 
+test('open hamburger turns into an X that stays clickable above the overlay', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+
+  const hamburger = page.locator('#hamburger');
+  const panelLink = page.locator('#hamburger-menu a[href="#about"]');
+
+  await hamburger.click();                          // open
+  await expect(page.locator('#toggle')).toBeChecked();
+  await expect(hamburger).toHaveClass(/is-active/);  // animated into the X
+  await expect(panelLink).toBeVisible();
+
+  // Clicking the X closes it. If the overlay still covered the hamburger,
+  // Playwright's actionability check would fail here (pointer-events intercepted).
+  await hamburger.click();
+  await expect(page.locator('#toggle')).not.toBeChecked();
+  await expect(panelLink).toBeHidden();
+});
+
 test('basic accessibility: lang attr, single h1, every link has a name', async ({ page }) => {
   await expect(page.locator('html')).toHaveAttribute('lang', /^(en|cs)$/);
   await expect(page.locator('h1')).toHaveCount(1);
