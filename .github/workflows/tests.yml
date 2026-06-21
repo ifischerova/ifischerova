@@ -43,35 +43,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - id: tests
-        run: npx playwright test
+      - run: npx playwright test
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
           name: playwright-report-live
           path: playwright-report/
           retention-days: 14
-      # Emails the result of every live run (pass or fail) so you don't have to
-      # check GitHub. Uses the Resend API (no SMTP / Gmail app password needed).
-      # Requires repo secrets RESEND_API_KEY and MAIL_TO (see README).
-      # continue-on-error so a missing/incorrect mail config never turns the
-      # test result red.
-      - name: Email the live-test result
-        if: ${{ always() }}
-        continue-on-error: true
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
-          OUTCOME: ${{ steps.tests.outcome }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        run: |
-          body=$(printf 'Daily live-site Playwright tests for https://ifischerova.cz have finished.\n\nResult: %s\nRun + HTML report: %s\n\nThe full HTML report is attached to the run as the "playwright-report-live" artifact.\n' "$OUTCOME" "$RUN_URL")
-          jq -n \
-            --arg to "$MAIL_TO" \
-            --arg subject "[ifischerova.cz] Live tests: $OUTCOME" \
-            --arg text "$body" \
-            '{from: "ifischerova.cz CI <onboarding@resend.dev>", to: [$to], subject: $subject, text: $text}' \
-          | curl -fsS -X POST https://api.resend.com/emails \
-              -H "Authorization: Bearer $RESEND_API_KEY" \
-              -H "Content-Type: application/json" \
-              --data @-

@@ -21,7 +21,7 @@ test suite, CI, and automated audits.
 - **Tested like a product** — a Playwright suite guards the content, the language switch, the
   contact links, and even that no Twitter ever sneaks back in.
 - **CI and scheduled health checks** — every push is tested, and the live site is re-tested
-  daily (with an email if anything looks off).
+  daily.
 - **Lighthouse audits** — performance, accessibility, best-practices and SEO, on demand and weekly.
 
 ## Tech stack
@@ -60,16 +60,9 @@ Download it, unzip, and open `index.html`.
 ## Automation
 
 - **`Tests`** workflow — runs on every push/PR (build and test locally) and daily at 06:00 UTC
-  against the live site. The live run emails its result so everything can be monitored without
-  opening GitHub.
+  against the live site.
 - **`Lighthouse`** workflow — on demand and weekly; audits the built site and posts a public
   report link in the run log.
-
-> **Email notifications** use the [Resend](https://resend.com) API (no SMTP / app password).
-> Add two repository secrets (*Settings -> Secrets and variables -> Actions*):
-> `RESEND_API_KEY` and `MAIL_TO`. On Resend's free tier the test sender
-> (`onboarding@resend.dev`) can only deliver to the email you signed up with; to send
-> elsewhere, verify a domain in Resend and update the `from` address in the workflow.
 
 ## Structure
 
