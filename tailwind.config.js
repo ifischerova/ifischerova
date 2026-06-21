@@ -12,6 +12,7 @@ module.exports = {
         cloud: "#e2e8f0",
         teal: "#2dd4bf",
         "teal-deep": "#14b8a6",
+        past: "#64748b",
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
