@@ -63,6 +63,8 @@ Download it, unzip, and open `index.html`.
   against the live site.
 - **`Lighthouse`** workflow — on demand and weekly; audits the built site and posts a public
   report link in the run log.
+- **`Keepalive`** workflow — weekly; pushes a timestamp commit once the repo nears 60 days of
+  inactivity, which is when GitHub would otherwise disable the two schedules above.
 
 ## Structure
 
